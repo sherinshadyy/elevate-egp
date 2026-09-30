@@ -1,0 +1,36 @@
+elevate.egp — How to edit
+========================
+
+Folder: Documents\elevate-eg
+Open index.html in your browser to preview.
+
+
+1) INSTAGRAM
+------------
+Search index.html for:  EDIT INSTAGRAM HERE
+Update the href and @elevate.egp text where needed.
+
+
+2) SCREENSHOTS (no project names)
+---------------------------------
+Search for:  EDIT SCREENSHOTS HERE
+Put photos in /assets as shot-1.jpg … shot-6.jpg
+Update each <img src="assets/shot-X.svg"> to your .jpg
+
+
+3) PACKAGES
+-----------
+Search for:
+  EDIT BASIC FEATURES HERE
+  EDIT PREMIUM FEATURES HERE
+  EDIT SHARED FEATURES HERE
+  EDIT DOMAIN PRICE HERE
+
+Prices are NOT shown on the site — only shared via Instagram DM.
+Domain note currently says $20 / year.
+
+
+4) COLORS (optional)
+--------------------
+Open styles.css and edit values under :root
+(neutral nude / stone tones).
