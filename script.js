@@ -14,20 +14,41 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  function closeMenu() {
+    if (!toggle || !nav) return;
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+    nav.classList.remove("is-open");
+    if (header) header.classList.remove("is-open");
+  }
+
+  function openMenu() {
+    if (!toggle || !nav) return;
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Close menu");
+    nav.classList.add("is-open");
+    if (header) header.classList.add("is-open");
+  }
+
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      nav.classList.toggle("is-open", !open);
-      document.body.style.overflow = open ? "" : "hidden";
+      if (open) closeMenu();
+      else openMenu();
     });
 
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.setAttribute("aria-expanded", "false");
-        nav.classList.remove("is-open");
-        document.body.style.overflow = "";
-      });
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 720) closeMenu();
     });
   }
 
@@ -38,13 +59,12 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset = (header ? header.offsetHeight : 64) + 8;
+      const offset = (header ? header.offsetHeight : 56) + 10;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
     });
   });
 
-  /* Soft fallback if a screenshot file is missing */
   document.querySelectorAll(".shot img").forEach((img, i) => {
     img.addEventListener("error", function onErr() {
       img.removeEventListener("error", onErr);
