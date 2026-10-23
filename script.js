@@ -130,27 +130,10 @@
 
 
 
-      work_kicker:
-
-        "Example project",
-
-
-
-      work_title:
-
-        "One store, different screens.",
-
-
-
-      work_text:
-
-        "These screenshots show different parts of the same ecommerce store, from the homepage to product and shopping pages.",
-
-
-
-      work_button:
-
-        "See more on Instagram",
+      work_kicker: "Selected work",
+      work_title: "Websites we've built.",
+      work_text: "A selection of ecommerce stores we've designed. Choose a project to explore it.",
+      work_button: "See more on Instagram",
 
 
 
@@ -497,27 +480,10 @@
 
 
 
-      work_kicker:
-
-        "مشروع تجريبي",
-
-
-
-      work_title:
-
-        "متجر واحد، شاشات مختلفة.",
-
-
-
-      work_text:
-
-        "هذه الصور توضح أجزاء مختلفة من نفس المتجر الإلكتروني، بدايةً من الصفحة الرئيسية وحتى صفحات المنتجات والتسوق.",
-
-
-
-      work_button:
-
-        "شاهد المزيد على إنستجرام",
+      work_kicker: "أعمال مختارة",
+      work_title: "متاجر إلكترونية صممناها.",
+      work_text: "مجموعة من المتاجر الإلكترونية التي صممناها. اختاري أحد المشاريع لاستكشافه.",
+      work_button: "شاهد المزيد على إنستجرام",
 
 
 
