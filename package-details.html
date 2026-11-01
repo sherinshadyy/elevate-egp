@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5eee6">
+<title>Package Information | elevate.egp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.info-hero{text-align:center;padding:55px 6% 30px;background:#f2e7dc}
+.info-hero .eyebrow{margin-bottom:13px}
+.info-hero h1{font:500 clamp(31px,3.8vw,43px)/1.2 "Playfair Display",serif;margin:0}
+.info-wrap{max-width:980px;margin:auto;padding:34px 6% 65px}
+.info-section-title{font:500 23px "Playfair Display",serif;margin:0 0 18px}
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.info-card{background:rgba(255,252,248,.68);border:1px solid #e5d8cb;border-radius:15px;padding:22px 23px}
+.info-card h3{font:600 16px "DM Sans",sans-serif;margin:0 0 9px;color:#755538}
+.info-card p{font-size:13px;line-height:1.65;color:#54483f;margin:0}
+.info-card ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.info-card li{font-size:12.5px;line-height:1.6;padding-left:19px;position:relative;color:#4c4038}
+.info-card li:before{content:"✓";position:absolute;left:0;color:#987044;font-weight:700}
+.info-panel{margin-top:17px;background:#efe5db;border:1px solid #e5d8cb;border-radius:15px;padding:22px 24px}
+.info-panel h3{font:600 16px "DM Sans",sans-serif;margin:0 0 8px;color:#755538}
+.info-panel p{font-size:12.5px;line-height:1.7;color:#54483f;margin:7px 0 0}
+.info-addons{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.info-addon{background:rgba(255,252,248,.68);border:1px solid #e5d8cb;border-radius:13px;padding:17px 20px;font-size:13px;color:#4c4038}
+.back-link{display:inline-block;margin:0 6% 35px;color:#987044;text-decoration:underline;text-underline-offset:4px;font-size:12px}
+body.is-arabic{font-family:"Cairo",sans-serif}
+body.is-arabic .info-hero h1,body.is-arabic .info-section-title{font-family:"Cairo",sans-serif;line-height:1.5}
+body.is-arabic .info-card,body.is-arabic .info-panel{text-align:right}
+body.is-arabic .info-card h3,body.is-arabic .info-panel h3{font-family:"Cairo",sans-serif}
+body.is-arabic .info-card li{padding-left:0;padding-right:19px}
+body.is-arabic .info-card li:before{left:auto;right:0}
+@media(max-width:650px){.info-grid{grid-template-columns:1fr}.info-addons{grid-template-columns:1fr}.info-card{padding:20px}.info-card p,.info-card li,.info-panel p{font-size:13px}}
+</style></head>
+<body>
+<header class="site-header">
+<a class="brand" href="index.html"><span class="brand-star">✦</span> elevate.egp</a>
+<button class="language-toggle" id="info-language" type="button" aria-label="Switch language">AR</button>
+</header>
+<section class="info-hero">
+<p class="eyebrow">THE DETAILS THAT MAKE THE DIFFERENCE</p>
+<h1 id="info-title">Everything You Need to Get Your Store Running</h1>
+</section>
+<main class="info-wrap">
+<h2 class="info-section-title" id="included-title">Included in every website package</h2>
+<div class="info-grid" id="included-grid">
+  <section class="info-card"><h3>Store essentials</h3><ul><li>Core shopping pages and a smooth checkout journey</li><li>Cart, customer login and OTP verification</li><li>Payment and shipping setup</li><li>Order confirmation emails</li></ul></section>
+  <section class="info-card"><h3>Manage your store</h3><ul><li>A simple dashboard to add and update products</li><li>View and manage incoming orders from one place</li></ul></section>
+  <section class="info-card"><h3>Guidance &amp; support</h3><ul><li>A short tutorial to help you use your website</li><li>7 days of support after delivery</li></ul></section>
+  <section class="info-card"><h3>Ready for every screen</h3><ul><li>Optimized for mobile phones, tablets and desktops</li><li>SEO setup to help customers discover your store</li></ul></section>
+</div>
+<section class="info-panel">
+<h3 id="addons-title">Optional extras</h3>
+<div class="info-addons" id="addons-grid">
+<div class="info-addon">A second language for your website</div>
+<div class="info-addon">10 additional products</div>
+</div>
+</section>
+<section class="info-panel">
+<h3 id="important-title">A couple of things to know</h3>
+<p id="domain-note">Your domain name is registered separately and its cost is not included in the website package.</p>
+<p id="orders-note">Every website package supports up to 30 orders per month. If your store needs a higher monthly limit, you can upgrade directly through the platform. Orders appear in your dashboard, while the available management tools depend on the platform plan.</p>
+</section>
+</main>
+<a class="back-link" id="back-link" href="index.html#packages">← Back to packages</a>
+<script>
+const infoTranslations={
+ en:{title:"Everything You Need to Get Your Store Running",eyebrow:"THE DETAILS THAT MAKE THE DIFFERENCE",included:"Included in every website package",cards:[
+  {title:"Store essentials",items:["Core shopping pages and a smooth checkout journey","Cart, customer login and OTP verification","Payment and shipping setup","Order confirmation emails"]},
+  {title:"Manage your store",items:["A simple dashboard to add and update products","View and manage incoming orders from one place"]},
+  {title:"Guidance & support",items:["A short tutorial to help you use your website","7 days of support after delivery"]},
+  {title:"Ready for every screen",items:["Optimized for mobile phones, tablets and desktops","SEO setup to help customers discover your store"]}],
+ addons:"Optional extras",addonItems:["A second language for your website","10 additional products"],important:"A couple of things to know",domain:"Your domain name is registered separately and its cost is not included in the website package.",orders:"Every website package supports up to 30 orders per month. If your store needs a higher monthly limit, you can upgrade directly through the platform. Orders appear in your dashboard, while the available management tools depend on the platform plan.",back:"← Back to packages"},
+ ar:{title:"كل ما تحتاجه لبدء متجرك الإلكتروني",eyebrow:"كل التفاصيل التي تصنع الفرق",included:"مميزات متوفرة مع كل باقة",cards:[
+  {title:"أساسيات المتجر",items:["صفحات التسوق الأساسية وتجربة سهلة لإتمام الطلب","سلة التسوق وتسجيل دخول العملاء والتحقق برمز OTP","إعداد وسائل الدفع والشحن","رسائل تأكيد الطلب عبر البريد الإلكتروني"]},
+  {title:"إدارة متجرك",items:["لوحة تحكم بسيطة لإضافة المنتجات وتحديثها","متابعة الطلبات الواردة وإدارتها من مكان واحد"]},
+  {title:"الإرشاد والدعم",items:["فيديو قصير يشرح لك كيفية استخدام الموقع","دعم لمدة 7 أيام بعد تسليم الموقع"]},
+  {title:"موقع متوافق مع جميع الشاشات",items:["تصميم متوافق مع الهواتف والأجهزة اللوحية والكمبيوتر","إعدادات SEO لمساعدة العملاء في العثور على متجرك"]}],
+ addons:"إضافات اختيارية",addonItems:["إتاحة الموقع بلغة ثانية","إضافة 10 منتجات أخرى"],important:"معلومات مهمة قبل البدء",domain:"يتم حجز اسم النطاق بشكل منفصل، ولا تُحتسب تكلفته ضمن سعر باقة الموقع.",orders:"تدعم كل باقة استقبال ما يصل إلى 30 طلبًا شهريًا. إذا كان متجرك يحتاج إلى حد أعلى، يمكنك ترقية الحد مباشرةً من خلال المنصة. ستظهر الطلبات في لوحة التحكم، بينما تختلف أدوات إدارتها حسب خطة المنصة.",back:"العودة إلى الباقات ←"}
+};
+function renderInfo(lang){
+ const t=infoTranslations[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";document.body.classList.toggle("is-arabic",lang==="ar");
+ document.querySelector(".info-hero .eyebrow").textContent=t.eyebrow;
+ document.getElementById("info-title").textContent=t.title;document.getElementById("included-title").textContent=t.included;
+ document.getElementById("included-grid").innerHTML=t.cards.map(card=>`<section class="info-card"><h3>${card.title}</h3><ul>${card.items.map(item=>`<li>${item}</li>`).join("")}</ul></section>`).join("");
+ document.getElementById("addons-title").textContent=t.addons;document.getElementById("addons-grid").innerHTML=t.addonItems.map(item=>`<div class="info-addon">${item}</div>`).join("");
+ document.getElementById("important-title").textContent=t.important;document.getElementById("domain-note").textContent=t.domain;document.getElementById("orders-note").textContent=t.orders;document.getElementById("back-link").textContent=t.back;
+ const b=document.getElementById("info-language");b.textContent=lang==="en"?"AR":"EN";localStorage.setItem("elevate-language",lang);
+}
+document.getElementById("info-language").addEventListener("click",()=>renderInfo(document.documentElement.lang==="en"?"ar":"en"));
+renderInfo(localStorage.getItem("elevate-language")||"en");
+</script></body></html>
