@@ -1,99 +1,128 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elevate.egp creates custom e-commerce websites, AI product photoshoots and landing pages for growing businesses.">
+  <meta name="description" content="Elevate.egp creates custom e-commerce websites, AI product photoshoots and landing pages.">
   <meta name="theme-color" content="#f5eee6">
   <title>elevate.egp — Build. Elevate. Grow.</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Elevate home"><span class="brand-star">✦</span> elevate.egp</a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <a class="brand" href="#home" aria-label="Elevate home">
+      <span class="brand-star">✦</span> elevate.egp
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
     <nav class="nav-links" aria-label="Main navigation">
-      <a href="#services">Our Services <span class="chevron">⌄</span></a>
-      <a href="#packages">Packages</a>
-      <a href="#process">Our Process</a>
-      <a href="#about">About Us</a>
-      <a class="nav-contact" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get in Touch <span>›</span></a>
+      <a href="#services" data-i18n="navServices">Our Services <span class="chevron">⌄</span></a>
+      <a href="#packages" data-i18n="navPackages">Packages</a>
+      <a href="#process" data-i18n="navProcess">Our Process</a>
+      <a href="#about" data-i18n="navAbout">About Us</a>
+
+      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language">
+        AR
+      </button>
+
+      <a class="nav-contact" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+        <span data-i18n="navContact">Get in Touch</span>
+        <span class="button-arrow">›</span>
+      </a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> BUILD · ELEVATE · GROW</p>
-        <h1>Custom E-Commerce<br>Solutions &amp; More</h1>
-        <p class="hero-description">We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.</p>
-        <a class="dark-button" href="#packages">Explore Our Packages <span>›</span></a>
+        <p class="eyebrow"><span></span> <span data-i18n="heroEyebrow">BUILD · ELEVATE · GROW</span></p>
+        <h1 data-i18n="heroTitle">Custom E-Commerce<br>Solutions &amp; More</h1>
+        <p class="hero-description" data-i18n="heroDescription">
+          We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.
+        </p>
+        <a class="dark-button" href="#packages">
+          <span data-i18n="heroButton">Explore Our Packages</span>
+          <span>›</span>
+        </a>
       </div>
     </section>
 
     <section class="packages section-pad" id="packages">
       <div class="section-heading">
-        <p class="eyebrow centered"><span></span> OUR PACKAGES <span></span></p>
-        <h2>Choose the Perfect Plan for Your Business</h2>
+        <p class="eyebrow centered"><span></span> <span data-i18n="packagesEyebrow">OUR PACKAGES</span> <span></span></p>
+        <h2 data-i18n="packagesTitle">Choose the Perfect Plan for Your Business</h2>
       </div>
 
       <div class="package-grid">
         <article class="package-card">
           <div class="package-top">
             <div>
-              <h3>Basic Website</h3>
-              <p>A clean and simple solution to get your business online.</p>
+              <h3 data-i18n="basicTitle">Basic Website</h3>
+              <p data-i18n="basicDescription">A clean and simple solution to get your business online.</p>
             </div>
             <span class="line-icon">✧</span>
           </div>
           <ul class="check-list">
-            <li>Clean &amp; simple website design</li>
-            <li>Up to 10 products (you can add more!)</li>
-            <li>Basic essential pages (Home, About Us &amp; Terms)</li>
-            <li>1 minor revision</li>
+            <li data-i18n="basicFeature1">Clean &amp; simple website design</li>
+            <li data-i18n="basicFeature2">Up to 10 products (you can add more!)</li>
+            <li data-i18n="basicFeature3">Basic essential pages (Home, About Us &amp; Terms)</li>
+            <li data-i18n="basicFeature4">1 minor revision</li>
           </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
+          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+            <span data-i18n="getStarted">Get Started</span><span>›</span>
+          </a>
         </article>
 
         <article class="package-card featured">
-          <span class="popular">Most Popular</span>
+          <span class="popular" data-i18n="popular">Most Popular</span>
           <div class="package-top">
             <div>
-              <h3>Standard Website</h3>
-              <p>A professional website with more flexibility.</p>
+              <h3 data-i18n="standardTitle">Standard Website</h3>
+              <p data-i18n="standardDescription">A professional website with more flexibility.</p>
             </div>
             <span class="line-icon">▤</span>
           </div>
           <ul class="check-list">
-            <li>Branded &amp; customized design</li>
-            <li>Up to 2 custom sections per page (Home, About us, Terms)</li>
-            <li>Up to 15 products (you can add more!)</li>
-            <li>2 minor revisions</li>
+            <li data-i18n="standardFeature1">Branded &amp; customized design</li>
+            <li data-i18n="standardFeature2">Up to 2 custom sections per page (Home, About Us, Terms)</li>
+            <li data-i18n="standardFeature3">Up to 15 products (you can add more!)</li>
+            <li data-i18n="standardFeature4">2 minor revisions</li>
           </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
+          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+            <span data-i18n="getStarted">Get Started</span><span>›</span>
+          </a>
         </article>
 
         <article class="package-card">
           <div class="package-top">
             <div>
-              <h3>Premium Website</h3>
-              <p>A fully customized experience for your brand.</p>
+              <h3 data-i18n="premiumTitle">Premium Website</h3>
+              <p data-i18n="premiumDescription">A fully customized experience for your brand.</p>
             </div>
             <span class="line-icon">◇</span>
           </div>
           <ul class="check-list">
-            <li>Fully customized concept &amp; branded design</li>
-            <li>Up to 20 products (you can add more!)</li>
-            <li>Custom Home, About Us &amp; Terms pages</li>
-            <li>Up to 5 custom sections on the homepage</li>
-            <li>Animations &amp; interactions</li>
-            <li>3 minor revisions</li>
+            <li data-i18n="premiumFeature1">Fully customized concept &amp; branded design</li>
+            <li data-i18n="premiumFeature2">Up to 20 products (you can add more!)</li>
+            <li data-i18n="premiumFeature3">Custom Home, About Us &amp; Terms pages</li>
+            <li data-i18n="premiumFeature4">Up to 5 custom sections on the homepage</li>
+            <li data-i18n="premiumFeature5">Animations &amp; interactions</li>
+            <li data-i18n="premiumFeature6">3 minor revisions</li>
           </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
+          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+            <span data-i18n="getStarted">Get Started</span><span>›</span>
+          </a>
         </article>
       </div>
     </section>
@@ -101,27 +130,27 @@
     <section class="services section-pad" id="services">
       <div class="service-feature ai-feature">
         <div class="service-copy">
-          <p class="eyebrow">MAKE YOUR PRODUCTS STAND OUT</p>
-          <h2>AI Photoshoot</h2>
-          <p>Turn your products into stunning AI-generated visuals.</p>
-          <span class="duration">◷ &nbsp;10 Seconds</span>
+          <p class="eyebrow" data-i18n="aiEyebrow">MAKE YOUR PRODUCTS STAND OUT</p>
+          <h2 data-i18n="aiTitle">AI Photoshoot</h2>
+          <p data-i18n="aiDescription">Turn your products into stunning AI-generated visuals.</p>
+          <span class="duration" data-i18n="aiDuration">◷ &nbsp;10 Seconds</span>
           <ul class="check-list compact">
-            <li>Realistic &amp; aesthetic results</li>
-            <li>Enhance your brand story</li>
-            <li>Perfect for social media &amp; ads</li>
+            <li data-i18n="aiFeature1">Realistic &amp; aesthetic results</li>
+            <li data-i18n="aiFeature2">Enhance your brand story</li>
+            <li data-i18n="aiFeature3">Perfect for social media &amp; ads</li>
           </ul>
         </div>
       </div>
 
       <div class="service-feature landing-feature">
         <div class="service-copy">
-          <p class="eyebrow">A FIRST IMPRESSION THAT CONVERTS</p>
-          <h2>Landing Pages</h2>
-          <p>High-converting landing pages to turn visitors into customers.</p>
+          <p class="eyebrow" data-i18n="landingEyebrow">A FIRST IMPRESSION THAT CONVERTS</p>
+          <h2 data-i18n="landingTitle">Landing Pages</h2>
+          <p data-i18n="landingDescription">High-converting landing pages to turn visitors into customers.</p>
           <ul class="check-list compact">
-            <li>Custom design</li>
-            <li>Compelling content</li>
-            <li>Designed for results</li>
+            <li data-i18n="landingFeature1">Custom design</li>
+            <li data-i18n="landingFeature2">Compelling content</li>
+            <li data-i18n="landingFeature3">Designed for results</li>
           </ul>
         </div>
       </div>
@@ -129,62 +158,62 @@
 
     <section class="why section-pad" id="about">
       <div class="section-heading">
-        <p class="eyebrow centered"><span></span> WHY ELEVATE <span></span></p>
-        <h2>Everything Your Online Store Needs</h2>
-        <p class="section-intro">More than a website — the essentials to help your business move forward.</p>
+        <p class="eyebrow centered"><span></span> <span data-i18n="whyEyebrow">WHY ELEVATE</span> <span></span></p>
+        <h2 data-i18n="whyTitle">Everything Your Online Store Needs</h2>
+        <p class="section-intro" data-i18n="whyIntro">More than a website — the essentials to help your business move forward.</p>
       </div>
 
       <div class="benefit-grid">
         <article class="benefit">
           <span class="number">01</span>
-          <h3>Custom design</h3>
-          <p>A website designed around your brand instead of a generic template.</p>
+          <h3 data-i18n="benefit1Title">Custom design</h3>
+          <p data-i18n="benefit1Description">A website designed around your brand instead of a generic template.</p>
         </article>
         <article class="benefit">
           <span class="number">02</span>
-          <h3>Product management</h3>
-          <p>Products, prices, descriptions and store content can be managed after launch.</p>
+          <h3 data-i18n="benefit2Title">Product management</h3>
+          <p data-i18n="benefit2Description">Products, prices, descriptions and store content can be managed after launch.</p>
         </article>
         <article class="benefit">
           <span class="number">03</span>
-          <h3>SEO &amp; analytics</h3>
-          <p>Basic SEO setup and analytics so your store is ready to be discovered and measured.</p>
+          <h3 data-i18n="benefit3Title">SEO &amp; analytics</h3>
+          <p data-i18n="benefit3Description">Basic SEO setup and analytics so your store is ready to be discovered and measured.</p>
         </article>
         <article class="benefit">
           <span class="number">04</span>
-          <h3>Store setup</h3>
-          <p>We help put the essential pieces together so your ecommerce website is ready to launch. From idea to online store.</p>
+          <h3 data-i18n="benefit4Title">Store setup</h3>
+          <p data-i18n="benefit4Description">We help put the essential pieces together so your ecommerce website is ready to launch.</p>
         </article>
       </div>
     </section>
 
     <section class="process section-pad" id="process">
       <div class="section-heading">
-        <p class="eyebrow centered"><span></span> HOW IT WORKS <span></span></p>
-        <h2>From Idea to Online</h2>
-        <p class="section-intro">A clear, collaborative process from the first conversation to launch.</p>
+        <p class="eyebrow centered"><span></span> <span data-i18n="processEyebrow">HOW IT WORKS</span> <span></span></p>
+        <h2 data-i18n="processTitle">From Idea to Online</h2>
+        <p class="section-intro" data-i18n="processIntro">A clear, collaborative process from the first conversation to launch.</p>
       </div>
 
       <div class="process-grid">
         <article class="process-step">
           <span class="number">01</span>
-          <h3>Discover</h3>
-          <p>We understand your brand, products and what your customers need.</p>
+          <h3 data-i18n="step1Title">Discover</h3>
+          <p data-i18n="step1Description">We understand your brand, products and what your customers need.</p>
         </article>
         <article class="process-step">
           <span class="number">02</span>
-          <h3>Design</h3>
-          <p>We shape the visual direction and create the main store experience.</p>
+          <h3 data-i18n="step2Title">Design</h3>
+          <p data-i18n="step2Description">We shape the visual direction and create the main store experience.</p>
         </article>
         <article class="process-step">
           <span class="number">03</span>
-          <h3>Build</h3>
-          <p>Your pages, products and ecommerce functionality are put together.</p>
+          <h3 data-i18n="step3Title">Build</h3>
+          <p data-i18n="step3Description">Your pages, products and ecommerce functionality are put together.</p>
         </article>
         <article class="process-step">
           <span class="number">04</span>
-          <h3>Launch</h3>
-          <p>We make sure everything is ready and help you move forward.</p>
+          <h3 data-i18n="step4Title">Launch</h3>
+          <p data-i18n="step4Description">We make sure everything is ready and help you move forward.</p>
         </article>
       </div>
     </section>
@@ -192,17 +221,27 @@
     <section class="closing">
       <div class="closing-ornament left"></div>
       <div class="closing-ornament right"></div>
-      <p class="eyebrow centered">YOUR NEXT CHAPTER STARTS HERE</p>
-      <h2>Let’s Elevate Your Business Together</h2>
-      <a class="dark-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Contact Us <span>›</span></a>
+      <p class="eyebrow centered" data-i18n="closingEyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+      <h2 data-i18n="closingTitle">Let’s Elevate Your Business Together</h2>
+      <a class="dark-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+        <span data-i18n="closingButton">Contact Us</span><span>›</span>
+      </a>
     </section>
   </main>
 
   <footer>
     <a class="brand" href="#home"><span class="brand-star">✦</span> elevate.egp</a>
-    <p>Build · Elevate · Grow</p>
-    <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Instagram ↗</a>
-    <small>© <span id="year"></span> elevate.egp. All rights reserved.</small>
+    <p data-i18n="footerTagline">Build · Elevate · Grow</p>
+
+    <a class="footer-instagram" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
+      <span data-i18n="footerInstagram">Instagram</span>
+      <svg class="external-link-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M7 17 17 7"></path>
+        <path d="M7 7h10v10"></path>
+      </svg>
+    </a>
+
+    <small>© <span id="year"></span> elevate.egp. <span data-i18n="footerRights">All rights reserved.</span></small>
   </footer>
 
   <script src="script.js"></script>
