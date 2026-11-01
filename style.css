@@ -222,3 +222,147 @@ footer small{grid-column:1/-1;margin:10px 0 0}
 @media(max-width:390px){
   .hero h1{font-size:37px}
 }
+
+/* GOLD BRAND NAME */
+.brand {
+  color: #a98258;
+}
+
+/* LANGUAGE SWITCH BUTTON */
+.language-toggle {
+  border: 1px solid #b18a60;
+  background: transparent;
+  color: #987044;
+  border-radius: 25px;
+  padding: 8px 13px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.language-toggle:hover {
+  background: #a98258;
+  color: white;
+}
+
+/* INSTAGRAM FOOTER ICON */
+.footer-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: color 0.2s ease;
+}
+
+.footer-instagram:hover {
+  color: #a98258;
+}
+
+.external-link-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.footer-instagram:hover .external-link-icon {
+  transform: translate(2px, -2px);
+}
+
+/* ARABIC LANGUAGE */
+.is-arabic {
+  font-family: "Cairo", sans-serif;
+}
+
+.is-arabic .brand {
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0;
+}
+
+.is-arabic .nav-links,
+.is-arabic .nav-contact,
+.is-arabic .dark-button,
+.is-arabic .package-button,
+.is-arabic .language-toggle,
+.is-arabic footer {
+  font-family: "Cairo", sans-serif;
+}
+
+.is-arabic .hero h1,
+.is-arabic .section-heading h2,
+.is-arabic .service-copy h2,
+.is-arabic .closing h2,
+.is-arabic .package-top h3,
+.is-arabic .benefit h3,
+.is-arabic .process-step h3 {
+  font-family: "Cairo", sans-serif;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+.is-arabic .hero-copy,
+.is-arabic .service-copy,
+.is-arabic .benefit,
+.is-arabic .process-step {
+  text-align: right;
+}
+
+.is-arabic .eyebrow {
+  letter-spacing: 0;
+}
+
+.is-arabic .eyebrow > span {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.is-arabic .check-list li {
+  padding-left: 0;
+  padding-right: 22px;
+}
+
+.is-arabic .check-list li:before {
+  left: auto;
+  right: 0;
+}
+
+.is-arabic .process-step {
+  border-left: 0;
+  border-right: 1px solid #cbb49c;
+}
+
+.is-arabic .package-top {
+  flex-direction: row;
+}
+
+.is-arabic .package-button,
+.is-arabic .dark-button,
+.is-arabic .nav-contact {
+  flex-direction: row;
+}
+
+.is-arabic footer small {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.is-arabic .footer-instagram {
+  flex-direction: row;
+}
+
+.is-arabic .popular {
+  letter-spacing: 0;
+}
+
+@media (max-width: 680px) {
+  .language-toggle {
+    align-self: flex-start;
+    margin-top: 12px;
+    padding: 9px 16px;
+  }
+
+  .is-arabic .process-step {
+    border-right: 1px solid #cbb49c;
+  }
+}
