@@ -44,3 +44,32 @@
   vertical-align: middle;
   color: currentColor;
 }
+/* Consistent SVG arrows everywhere */
+.doodle-svg.arrow-svg {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.inline-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .arrow-svg {
+  width: 18px;
+  height: 18px;
+}
+
+.scroll-arrow .arrow-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.arrow-up-svg {
+  margin-left: 4px;
+}
