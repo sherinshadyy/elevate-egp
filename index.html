@@ -1,148 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Elevate.egp creates custom e-commerce websites, AI product photoshoots and landing pages for growing businesses.">
-  <meta name="theme-color" content="#f5eee6">
-  <title>elevate.egp — Build. Elevate. Grow.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Elevate creates thoughtful e-commerce websites, AI product videos and landing pages for ambitious brands.">
+  <meta name="theme-color" content="#f5e9df">
+  <title>Elevate — We Create. You Elevate.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Elevate home"><span class="brand-star">✦</span> elevate.egp</a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#packages">Our Services <span class="chevron">⌄</span></a>
-      <a href="#process">Our Process</a>
-      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language">AR</button>
-      <a class="nav-contact" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get in Touch <span>›</span></a>
+    <a class="wordmark" href="index.html" aria-label="Elevate home">Elevate<span>.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#home" data-i18n="navHome">Home</a>
+      <a href="#services" data-i18n="navServices">Services</a>
+      <a href="#packages" data-i18n="navPackages">Packages</a>
+      <a href="#difference" data-i18n="navDifference">Why Elevate</a>
+      <a href="#faq" data-i18n="navFaq">FAQ</a>
     </nav>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Language">
+        <button class="lang-btn selected" data-lang="en" aria-pressed="true">EN</button>
+        <span>/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+      <a class="button button-dark header-cta contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsTalk">Let's Talk</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow"><span></span> BUILD · ELEVATE · GROW</p>
-        <h1>Custom E-Commerce<br>Solutions &amp; More</h1>
-        <p class="hero-description">We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.</p>
-        <a class="dark-button" href="#packages">Explore Our Packages <span>›</span></a>
+    <section class="hero split-grid" id="home">
+      <div class="hero-left panel">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">DIGITAL DESIGN &amp; E-COMMERCE SOLUTIONS</p>
+          <h1><span data-i18n="heroLine1">We Create.</span><br><em data-i18n="heroLine2">You Elevate.</em><span class="scribble underline-hero" aria-hidden="true"></span></h1>
+          <span class="doodle-star star-hero" aria-hidden="true">✳</span>
+          <p class="hero-description" data-i18n="heroDescription">We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.</p>
+          <div class="hero-buttons">
+            <a class="button button-dark" href="#services" data-i18n="exploreServices">Explore Our Services</a>
+            <a class="button button-outline" href="#packages" data-i18n="viewPackages">View Packages</a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#services"><span>↓</span><span data-i18n="scrollDown">Scroll Down</span></a>
+        <div class="hero-wave" aria-hidden="true"></div>
+      </div>
+      <div class="hero-right panel">
+        <span class="doodle-star star-small" aria-hidden="true">✳</span>
+        <p class="hero-side-title" data-i18n-html="sideTitle">Creative Solutions.<br>Real Business <em>Impact.</em></p>
+        <p class="side-description" data-i18n="sideDescription">From building your online store to creating visuals that capture attention, we help your brand establish a stronger digital presence.</p>
+        <div class="service-preview" id="services">
+          <article>
+            <span class="number">01</span><h3 data-i18n-html="serviceOne">E-commerce<br>Websites</h3>
+            <p data-i18n="serviceOneDesc">Your brand deserves more than a generic online store.</p>
+            <a href="#packages" class="text-link"><span data-i18n="explorePackages">Explore Packages</span> <span>→</span></a>
+          </article>
+          <article>
+            <span class="number">02</span><h3 data-i18n-html="serviceTwo">AI Product<br>Videos</h3>
+            <p data-i18n="serviceTwoDesc">Turn your products into stunning AI-generated visuals.</p>
+            <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener"><span data-i18n="getAI">Get Your AI Video</span> <span>→</span></a>
+          </article>
+          <article>
+            <span class="number">03</span><h3 data-i18n="serviceThree">Landing Pages</h3>
+            <p data-i18n="serviceThreeDesc">A first impression that converts.</p>
+            <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener"><span data-i18n="discussProject">Discuss Your Project</span> <span>→</span></a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="packages section-pad" id="packages">
+    <section class="packages-section panel" id="packages">
       <div class="section-heading">
-        <p class="eyebrow centered"><span></span> OUR PACKAGES <span></span></p>
-        <h2>Choose the Perfect Plan for Your Business</h2>
+        <h2 data-i18n-html="packagesTitle"><span>Find the Perfect Fit</span> for Your Brand.</h2>
+        <p data-i18n="packagesSubtitle">From a simple online store to a fully bespoke shopping experience, discover the right solution for your business.</p>
       </div>
       <div class="package-grid">
         <article class="package-card">
-          <div class="package-top"><div><h3>Basic Website</h3><p>A clean and simple solution to get your business online.</p></div><span class="line-icon">✧</span></div>
-          <ul class="check-list">
-            <li>Clean &amp; simple website design</li>
-            <li>Up to 10 products (you can add more!)</li>
-            <li>Basic essential pages (Home, About Us &amp; Terms)</li>
-            <li>1 minor revision</li>
+          <div class="package-heading"><h3 data-i18n="starter">Starter</h3><span class="platform">Wuilt</span></div>
+          <p class="package-intro" data-i18n="starterIntro">A clean and simple solution to get your business online.</p>
+          <ul class="feature-list">
+            <li data-i18n="starterFeature1">Clean and simple design</li><li data-i18n="starterFeature2">Up to 10 products</li><li data-i18n="starterFeature3">Home, About &amp; Terms</li><li data-i18n="starterFeature4">1 minor revision</li>
           </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
-        </article>
-        <article class="package-card featured">
-          <span class="popular">Most Popular</span>
-          <div class="package-top"><div><h3>Standard Website</h3><p>A professional website with more flexibility.</p></div><span class="line-icon">▤</span></div>
-          <ul class="check-list">
-            <li>Branded &amp; customized design</li>
-            <li>Up to 2 custom sections per page (Home, About us, Terms)</li>
-            <li>Up to 15 products (you can add more!)</li>
-            <li>2 minor revisions</li>
-          </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
+          <div class="card-actions"><a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">Request a Quote <span>→</span></a><a class="button button-demo" href="https://cmubu12fe006s01i3gxyq15l7.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">Visit a Demo ↗</a></div>
         </article>
         <article class="package-card">
-          <div class="package-top"><div><h3>Premium Website</h3><p>A fully customized experience for your brand.</p></div><span class="line-icon">◇</span></div>
-          <ul class="check-list">
-            <li>Fully customized concept &amp; branded design</li>
-            <li>Up to 20 products (you can add more!)</li>
-            <li>Custom Home, About Us &amp; Terms pages</li>
-            <li>Up to 5 custom sections on the homepage</li>
-            <li>Animations &amp; interactions</li>
-            <li>3 minor revisions</li>
+          <div class="package-heading"><h3 data-i18n="advanced">Advanced</h3><span class="platform">Wuilt</span></div>
+          <p class="package-intro" data-i18n="advancedIntro">A branded website with a more personalized look.</p>
+          <ul class="feature-list">
+            <li data-i18n="advancedFeature1">Custom Sections</li><li data-i18n="advancedFeature2">Up to 15 products</li><li data-i18n="advancedFeature3">Up to 4 sections</li><li data-i18n="advancedFeature4">Animated text &amp; basic animations</li><li data-i18n="advancedFeature5">2 minor revisions</li>
           </ul>
-          <a class="package-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Get Started <span>›</span></a>
+          <div class="card-actions"><a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">Request a Quote <span>→</span></a><a class="button button-demo" href="https://cmunxmz9k06qw01hw3mqf13jw.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">Visit a Demo ↗</a></div>
+        </article>
+        <article class="package-card package-featured">
+          <span class="recommended" data-i18n="recommended">MOST RECOMMENDED</span>
+          <div class="package-heading"><h3 data-i18n="premium">Premium</h3><span class="platform">Shopify</span></div>
+          <p class="package-intro" data-i18n="premiumIntro">A completely bespoke shopping experience.</p>
+          <ul class="feature-list">
+            <li data-i18n="premiumFeature1">Full custom design &amp; styling</li><li data-i18n="premiumFeature2">Up to 20 products</li><li data-i18n="premiumFeature3">All essential pages</li><li data-i18n="premiumFeature4">Advanced animations</li><li data-i18n="premiumFeature5">Video &amp; pop-ups</li><li data-i18n="premiumFeature6">2 minor revisions</li>
+          </ul>
+          <div class="card-actions"><a class="button button-dark" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">Request a Quote <span>→</span></a><a class="button button-demo" href="https://summer-fridays-rbpsct7r.myshopify.com" target="_blank" rel="noopener" data-i18n="visitDemo">Visit a Demo ↗</a><small class="demo-password" data-i18n="demoPassword">Demo password (all lowercase): elevate</small></div>
         </article>
       </div>
-      <div class="package-info-action">
-        <a class="package-details-link" href="package-details.html">What’s Included?</a>
+      <div class="included-button-row"><a class="button button-dark" href="included.html" data-i18n="whatsIncluded">What's Included? <span>→</span></a></div>
+      <p class="more-work"><span class="tiny-spark">✳</span><span data-i18n="moreWork">Want to see more? Explore more website designs and projects on our Instagram</span> <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a><span class="tiny-spark">✳</span></p>
+    </section>
+
+    <section class="difference-section split-grid" id="difference">
+      <div class="difference-left panel">
+        <div class="section-heading">
+          <h2 data-i18n-html="differenceTitle">What’s the <em>Difference?</em></h2>
+          <p data-i18n="differenceSubtitle">Every package is designed around your brand. Compare the level of customization and creative freedom.</p>
+        </div>
+        <div class="comparison-wrap">
+          <table class="comparison-table">
+            <thead><tr><th data-i18n="feature">Feature</th><th data-i18n="starter">Starter</th><th data-i18n="advanced">Advanced</th><th data-i18n="premium">Premium</th></tr></thead>
+            <tbody>
+              <tr><td data-i18n="overallDesign">Overall design</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="halfPlatform">Standard platform design with custom sections</td><td data-i18n="fullCustomDesign">Full custom design &amp; styling</td></tr>
+              <tr><td data-i18n="customSections">Custom sections</td><td>—</td><td data-i18n="upTo4">Up to 4</td><td data-i18n="customBuilt">Custom-built</td></tr>
+              <tr><td data-i18n="essentialPages">Home, About &amp; Terms pages</td><td data-i18n="included">Included</td><td data-i18n="included">Included</td><td data-i18n="included">Included</td></tr>
+              <tr><td data-i18n="headerNavigation">Header &amp; navigation</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="customDesigned">Custom-designed</td></tr>
+              <tr><td data-i18n="productPages">Product pages</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="customDesigned">Custom-designed</td></tr>
+              <tr><td data-i18n="cartCheckout">Cart &amp; checkout</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="standardPlatform">Standard platform design</td><td data-i18n="customDesigned">Custom-designed</td></tr>
+              <tr><td data-i18n="animations">Animations &amp; interactions</td><td data-i18n="none">None</td><td data-i18n="basicAnimations">Animated text / basic animations</td><td data-i18n="advancedAnimations">Advanced animations</td></tr>
+              <tr><td data-i18n="videoIntegration">Video integration</td><td>—</td><td>—</td><td data-i18n="included">Included</td></tr>
+              <tr><td data-i18n="customPopups">Custom pop-ups</td><td>—</td><td>—</td><td data-i18n="included">Included</td></tr>
+              <tr><td data-i18n="productsUploaded">Products uploaded</td><td>10</td><td>15</td><td>20</td></tr>
+              <tr><td data-i18n="revisions">Revisions</td><td>1</td><td>2</td><td>2</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="comparison-notes"><p><strong data-i18n="starter">Starter</strong><br><span data-i18n="starterNote">A simple, polished foundation for your online store.</span></p><p><strong data-i18n="advanced">Advanced</strong><br><span data-i18n="advancedNote">More room to shape the website around your brand.</span></p><p><strong data-i18n="premium">Premium</strong><br><span data-i18n="premiumNote">A fully tailored Shopify experience with greater creative freedom.</span></p></div>
+      </div>
+      <aside class="difference-right panel">
+        <span class="doodle-star star-difference">✳</span>
+        <p class="eyebrow" data-i18n="needMore">NEED THE FULL BREAKDOWN?</p>
+        <h2 data-i18n-html="includedHeading">Everything that’s<br><em>included.</em></h2>
+        <p data-i18n="includedIntro">See the essentials included with every package, plus optional add-ons to make your store do more.</p>
+        <span class="side-doodle" aria-hidden="true">〰</span>
+      </aside>
+    </section>
+
+    <section class="essentials-section panel">
+      <div class="section-heading">
+        <h2 data-i18n-html="essentialsTitle"><em>Everything</em> Your Online Store Needs.</h2>
+        <p data-i18n="essentialsSubtitle">More than a website — the essentials to help your business move forward.</p>
+      </div>
+      <div class="essentials-grid">
+        <article><span class="number">01</span><h3 data-i18n="essentialOne">Custom Design</h3><p data-i18n="essentialOneDesc">A website designed around your brand.</p></article>
+        <article><span class="number">02</span><h3 data-i18n="essentialTwo">Product Management</h3><p data-i18n="essentialTwoDesc">Manage products and content easily.</p></article>
+        <article><span class="number">03</span><h3 data-i18n="essentialThree">SEO &amp; Analytics</h3><p data-i18n="essentialThreeDesc">Get discovered and measure your growth.</p></article>
+        <article><span class="number">04</span><h3 data-i18n="essentialFour">Store Setup</h3><p data-i18n="essentialFourDesc">Launch with confidence.</p></article>
       </div>
     </section>
 
-    <section class="services section-pad" id="services">
-      <div class="service-feature ai-feature">
-        <div class="service-copy">
-          <p class="eyebrow">MAKE YOUR PRODUCTS STAND OUT</p>
-          <h2>AI Photoshoot</h2>
-          <p>Turn your products into stunning AI-generated visuals.</p>
-          <span class="duration">◷ &nbsp;10 Seconds</span>
-          <ul class="check-list compact">
-            <li>Realistic &amp; aesthetic results</li>
-            <li>Enhance your brand story</li>
-            <li>Perfect for social media &amp; ads</li>
-          </ul>
+    <section class="faq-section panel" id="faq">
+      <div class="faq-main">
+        <div class="section-heading"><h2 data-i18n-html="faqTitle">Frequently Asked <em>Questions.</em></h2><p data-i18n="faqSubtitle">Find answers to the most common questions about our services.</p></div>
+        <div class="faq-list">
+          <details><summary data-i18n="faq1">Which website package should I choose?</summary><p data-i18n="faq1a">Starter is a great foundation, Advanced offers more custom sections, and Premium is for a fully bespoke Shopify experience.</p></details>
+          <details><summary data-i18n="faq2">What is the difference between Advanced and Premium?</summary><p data-i18n="faq2a">Advanced is built on Wuilt with expanded styling and sections. Premium is built on Shopify with a more deeply customized experience.</p></details>
+          <details><summary data-i18n="faq3">Can I add more products after delivery?</summary><p data-i18n="faq3a">Yes. You can manage your products through your store dashboard, or contact us if you need help adding more.</p></details>
+          <details><summary data-i18n="faq4">Is the domain included?</summary><p data-i18n="faq4a">Domain registration is handled separately and depends on the domain you choose.</p></details>
+          <details><summary data-i18n="faq5">Do you provide support after delivery?</summary><p data-i18n="faq5a">Every package includes seven days of support after delivery.</p></details>
         </div>
       </div>
-      <div class="service-feature landing-feature">
-        <div class="service-copy">
-          <p class="eyebrow">A FIRST IMPRESSION THAT CONVERTS</p>
-          <h2>Landing Pages</h2>
-          <p>High-converting landing pages to turn visitors into customers.</p>
-          <ul class="check-list compact">
-            <li>Custom design</li>
-            <li>Compelling content</li>
-            <li>Designed for results</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="why section-pad" id="about">
-      <div class="section-heading">
-        <p class="eyebrow centered"><span></span> WHY ELEVATE <span></span></p>
-        <h2>Everything Your Online Store Needs</h2>
-        <p class="section-intro">More than a website — the essentials to help your business move forward.</p>
-      </div>
-      <div class="benefit-grid">
-        <article class="benefit"><span class="number">01</span><h3>Custom design</h3><p>A website designed around your brand instead of a generic template.</p></article>
-        <article class="benefit"><span class="number">02</span><h3>Product management</h3><p>Products, prices, descriptions and store content can be managed after launch.</p></article>
-        <article class="benefit"><span class="number">03</span><h3>SEO &amp; analytics</h3><p>Basic SEO setup and analytics so your store is ready to be discovered and measured.</p></article>
-        <article class="benefit"><span class="number">04</span><h3>Store setup</h3><p>We help put the essential pieces together so your ecommerce website is ready to launch. From idea to online store.</p></article>
-      </div>
-    </section>
-
-    <section class="process section-pad" id="process">
-      <div class="section-heading">
-        <p class="eyebrow centered"><span></span> HOW IT WORKS <span></span></p>
-        <h2>From Idea to Online</h2>
-        <p class="section-intro">A clear, collaborative process from the first conversation to launch.</p>
-      </div>
-      <div class="process-grid">
-        <article class="process-step"><span class="number">01</span><h3>Discover</h3><p>We understand your brand, products and what your customers need.</p></article>
-        <article class="process-step"><span class="number">02</span><h3>Design</h3><p>We shape the visual direction and create the main store experience.</p></article>
-        <article class="process-step"><span class="number">03</span><h3>Build</h3><p>Your pages, products and ecommerce functionality are put together.</p></article>
-        <article class="process-step"><span class="number">04</span><h3>Launch</h3><p>We make sure everything is ready and help you move forward.</p></article>
-      </div>
-    </section>
-
-    <section class="closing">
-      <div class="closing-ornament left"></div><div class="closing-ornament right"></div>
-      <p class="eyebrow centered">YOUR NEXT CHAPTER STARTS HERE</p>
-      <h2>Let’s Elevate Your Business Together</h2>
-      <a class="dark-button" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Contact Us <span>›</span></a>
+      <aside class="faq-contact">
+        <span class="doodle-star faq-spark">✳</span>
+        <h3 data-i18n="stillQuestions">Still have questions?</h3>
+        <p data-i18n-html="talkInstagram">Let's talk on <em>Instagram!</em></p>
+        <a class="button button-light contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener"><span data-i18n="visitInstagram">Visit Our Instagram</span> <span>→</span></a>
+        <small>@elevate.egp</small>
+      </aside>
     </section>
   </main>
 
-  <footer><a class="brand" href="#home"><span class="brand-star">✦</span> elevate.egp</a><p>Build · Elevate · Grow</p><a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">Instagram ↗</a><small>© <span id="year"></span> elevate.egp. All rights reserved.</small></footer>
+  <footer class="site-footer">
+    <div class="footer-cta">
+      <h2 data-i18n-html="footerHeadline">Your Brand <em>Deserves</em><br>to <span>Stand Out.</span></h2>
+      <span class="doodle-star footer-star" aria-hidden="true">✳</span>
+      <p data-i18n="footerDescription">Let’s turn your ideas into a digital experience your customers won’t forget.</p>
+      <div class="footer-buttons"><a class="button button-lime contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsBuild">Let's Build Something <span>→</span></a><a class="button button-footer-outline contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="contactElevate">Contact Elevate</a></div>
+    </div>
+    <div class="footer-brand">
+      <a class="footer-logo" href="#home">Elevate.</a><p data-i18n="footerTagline">Digital design and e-commerce solutions that help brands grow.</p>
+      <p class="footer-about" data-i18n="footerAbout">Digital design and e-commerce solutions that help brands grow.</p>
+      <a class="instagram-handle" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">◎ &nbsp;@elevate.egp</a>
+    </div>
+    <div class="footer-links"><h4 data-i18n="quickLinks">Quick Links</h4><a href="#home" data-i18n="navHome">Home</a><a href="#services" data-i18n="navServices">Services</a><a href="#packages" data-i18n="navPackages">Packages</a><a href="included.html" data-i18n="whatsIncluded">What's Included?</a><a href="#faq" data-i18n="navFaq">FAQ</a></div>
+    <div class="footer-links"><h4 data-i18n="ourServices">Our Services</h4><a href="#packages" data-i18n-html="serviceOne">E-commerce Websites</a><a href="https://www.instagram.com/elevate.egp/" class="contact-link" target="_blank" rel="noopener" data-i18n-html="serviceTwo">AI Product Videos</a><a href="https://www.instagram.com/elevate.egp/" class="contact-link" target="_blank" rel="noopener" data-i18n="serviceThree">Landing Pages</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Elevate. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n-html="powered">Powered by <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a></span></div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
