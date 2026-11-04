@@ -14,12 +14,35 @@
   <style>
     /* Consistent vector doodles: crisp on desktop and mobile */
     .doodle-svg {
-      display: inline-block;
+      display: block;
       flex: 0 0 auto;
       width: 1.15em;
       height: 1.15em;
       overflow: visible;
       vertical-align: middle;
+    }
+
+    /* Keep every arrow a crisp SVG icon, never a text/emoji glyph. */
+    .arrow-svg {
+      display: block !important;
+      width: 18px !important;
+      height: 18px !important;
+      min-width: 18px;
+      font-family: sans-serif;
+      overflow: visible;
+    }
+
+    .arrow-svg path {
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .inline-arrow,
+    .button-demo > .arrow-svg {
+      flex: 0 0 18px;
     }
 
     .doodle-star-svg {
@@ -57,7 +80,8 @@
       display: inline-block;
       isolation: isolate;
       white-space: nowrap;
-      padding: 0 .12em;
+      padding: .02em .18em;
+      line-height: 1.25;
     }
 
     .impact-highlight::after {
@@ -65,23 +89,27 @@
       position: absolute;
       z-index: -1;
       pointer-events: none;
-      left: -.16em;
-      right: -.16em;
-      top: -.27em;
-      bottom: -.22em;
+      left: -.12em;
+      right: -.12em;
+      top: -.10em;
+      bottom: -.10em;
       border: 2px solid currentColor;
       border-radius: 50%;
-      transform: rotate(-5deg);
+      transform: rotate(-7deg);
       opacity: .9;
     }
 
     @media (max-width: 600px) {
+      .impact-highlight {
+        padding-inline: .16em;
+      }
+
       .impact-highlight::after {
-        left: -.12em;
-        right: -.12em;
-        top: -.22em;
-        bottom: -.18em;
-        border-width: 1.7px;
+        left: -.09em;
+        right: -.09em;
+        top: -.07em;
+        bottom: -.07em;
+        border-width: 1.6px;
       }
     }
   </style>
@@ -129,7 +157,7 @@
           </h1>
 
           <span class="doodle-star star-hero" aria-hidden="true">
-            <svg class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
               <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
                     stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
             </svg>
@@ -146,13 +174,19 @@
         </div>
 
         <a class="scroll-cue" href="#services">
-          <span class="scroll-arrow">
-            <svg class="doodle-svg arrow-svg arrow-down-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M12 4V20M5 13L12 20L19 13"
-                    stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+<span class="scroll-arrow">
+  <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-down-svg"
+       viewBox="0 0 24 24"
+       fill="none"
+       xmlns="http://www.w3.org/2000/svg"
+       aria-hidden="true">
+    <path d="M12 3V20M5 13L12 20L19 13"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</span>
           <span data-i18n="scrollDown">Scroll Down</span>
         </a>
 
@@ -161,7 +195,7 @@
 
       <div class="hero-right panel">
         <span class="doodle-star star-small" aria-hidden="true">
-          <svg class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
             <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
                   stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
           </svg>
@@ -183,7 +217,7 @@
             <a href="#packages" class="text-link">
               <span data-i18n="explorePackages">Explore Packages</span>
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -199,7 +233,7 @@
             <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener">
               <span data-i18n="getAI">Get Your AI Video</span>
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -215,7 +249,7 @@
             <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener">
               <span data-i18n="discussProject">Discuss Your Project</span>
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -255,7 +289,7 @@
             <a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
               Request a Quote
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -265,7 +299,7 @@
 
             <a class="button button-demo" href="https://cmubu12fe006s01i3gxyq15l7.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">
               Visit a Demo
-              <svg class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
+              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
                 <path d="M7 17L17 7M8 7H17V16"
                       stroke="currentColor" stroke-width="1.8"
                       stroke-linecap="round" stroke-linejoin="round"/>
@@ -294,7 +328,7 @@
             <a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
               Request a Quote
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -304,7 +338,7 @@
 
             <a class="button button-demo" href="https://cmunxmz9k06qw01hw3mqf13jw.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">
               Visit a Demo
-              <svg class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
+              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
                 <path d="M7 17L17 7M8 7H17V16"
                       stroke="currentColor" stroke-width="1.8"
                       stroke-linecap="round" stroke-linejoin="round"/>
@@ -336,7 +370,7 @@
             <a class="button button-dark" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
               Request a Quote
               <span class="inline-arrow">
-                <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
                   <path d="M4 12H19M12 5L19 12L12 19"
                         stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round"/>
@@ -346,7 +380,7 @@
 
             <a class="button button-demo" href="https://summer-fridays-rbpsct7r.myshopify.com" target="_blank" rel="noopener" data-i18n="visitDemo">
               Visit a Demo
-              <svg class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
+              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
                 <path d="M7 17L17 7M8 7H17V16"
                       stroke="currentColor" stroke-width="1.8"
                       stroke-linecap="round" stroke-linejoin="round"/>
@@ -362,7 +396,7 @@
         <a class="button button-dark" href="included.html" data-i18n="whatsIncluded">
           What's Included?
           <span class="inline-arrow">
-            <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
               <path d="M4 12H19M12 5L19 12L12 19"
                     stroke="currentColor" stroke-width="1.8"
                     stroke-linecap="round" stroke-linejoin="round"/>
@@ -372,7 +406,7 @@
       </div>
 
  <p class="more-work">
-  <svg class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
+  <svg aria-hidden="true" focusable="false" class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
        fill="none" aria-hidden="true">
     <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
           stroke="currentColor"
@@ -390,7 +424,7 @@
     @elevate.egp
   </a>
 
-  <svg class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
+  <svg aria-hidden="true" focusable="false" class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
        fill="none" aria-hidden="true">
     <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
           stroke="currentColor"
@@ -509,7 +543,7 @@
 
       <aside class="difference-right panel">
         <span class="doodle-star star-difference">
-          <svg class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
             <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
                   stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
           </svg>
@@ -520,7 +554,14 @@
         <p data-i18n="includedIntro">
           See the essentials included with every package, plus optional add-ons to make your store do more.
         </p>
-        <span class="side-doodle" aria-hidden="true">〰</span>
+        <span class="side-doodle" aria-hidden="true">
+          <svg viewBox="0 0 100 24" width="100" height="24"
+               fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 15C15 2 25 25 38 12S62 2 75 13S90 20 98 8"
+                  stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"/>
+          </svg>
+        </span>
       </aside>
     </section>
 
@@ -587,7 +628,7 @@
 
       <aside class="faq-contact">
         <span class="doodle-star faq-spark">
-          <svg class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
+          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
             <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
                   stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
           </svg>
@@ -599,7 +640,7 @@
         <a class="button button-light contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
           <span data-i18n="visitInstagram">Visit Our Instagram</span>
           <span class="inline-arrow">
-            <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
               <path d="M4 12H19M12 5L19 12L12 19"
                     stroke="currentColor" stroke-width="1.8"
                     stroke-linecap="round" stroke-linejoin="round"/>
@@ -617,7 +658,7 @@
       <h2 data-i18n-html="footerHeadline">Your Brand <em>Deserves</em><br>to <span>Stand Out.</span></h2>
 
       <span class="doodle-star footer-star" aria-hidden="true">
-        <svg class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
+        <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
           <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
                 stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
         </svg>
@@ -629,7 +670,7 @@
         <a class="button button-lime contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsBuild">
           Let's Build Something
           <span class="inline-arrow">
-            <svg class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
+            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
               <path d="M4 12H19M12 5L19 12L12 19"
                     stroke="currentColor" stroke-width="1.8"
                     stroke-linecap="round" stroke-linejoin="round"/>
