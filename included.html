@@ -1,58 +1,351 @@
+
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Discover what's included with every Elevate website package and optional add-ons.">
   <meta name="theme-color" content="#f5e9df">
   <title>What's Included? — Elevate</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* SVG ICONS - MOBILE & DESKTOP */
+
+    .item-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item-icon svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .doodle-star svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .button-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .button-arrow svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
+
 <body class="included-page">
+
   <header class="site-header">
     <a class="wordmark" href="index.html">Elevate<span>.</span></a>
-    <nav class="desktop-nav"><a href="index.html#home" data-i18n="navHome">Home</a><a href="index.html#services" data-i18n="navServices">Services</a><a href="index.html#packages" data-i18n="navPackages">Packages</a><a href="index.html#difference" data-i18n="navDifference">Why Elevate</a><a href="index.html#faq" data-i18n="navFaq">FAQ</a></nav>
-    <div class="header-actions"><div class="language-switch"><button class="lang-btn selected" data-lang="en" aria-pressed="true">EN</button><span>/</span><button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button></div><a class="button button-dark header-cta contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsTalk">Let's Talk</a><button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div>
+
+    <nav class="desktop-nav">
+      <a href="index.html#home" data-i18n="navHome">Home</a>
+      <a href="index.html#services" data-i18n="navServices">Services</a>
+      <a href="index.html#packages" data-i18n="navPackages">Packages</a>
+      <a href="index.html#difference" data-i18n="navDifference">Why Elevate</a>
+      <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="language-switch">
+        <button class="lang-btn selected" data-lang="en" aria-pressed="true">EN</button>
+        <span>/</span>
+        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
+      </div>
+
+      <a class="button button-dark header-cta contact-link"
+         href="https://www.instagram.com/elevate.egp/"
+         target="_blank" rel="noopener"
+         data-i18n="letsTalk">Let's Talk</a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
+
   <main>
+
     <section class="included-hero panel">
-      <a class="back-link" href="index.html#packages">← <span data-i18n="backPackages">Back to packages</span></a>
-      <p class="eyebrow" data-i18n="includedEyebrow">THE DETAILS THAT MAKE IT COMPLETE</p>
-      <div class="included-title-wrap"><h1 data-i18n-html="includedTitle">What's <em>Included?</em></h1><span class="scribble included-underline" aria-hidden="true"></span></div>
-      <p class="included-lead" data-i18n="includedLead">Every store needs more than a beautiful front page. Here's what comes with your Elevate website, and what you can add when you're ready.</p>
-      <span class="doodle-star included-star" aria-hidden="true">✳</span>
+
+      <a class="back-link" href="index.html#packages">
+        ← <span data-i18n="backPackages">Back to packages</span>
+      </a>
+
+      <p class="eyebrow" data-i18n="includedEyebrow">
+        THE DETAILS THAT MAKE IT COMPLETE
+      </p>
+
+      <div class="included-title-wrap">
+        <h1 data-i18n-html="includedTitle">What's <em>Included?</em></h1>
+        <span class="scribble included-underline" aria-hidden="true"></span>
+      </div>
+
+      <p class="included-lead" data-i18n="includedLead">
+        Every store needs more than a beautiful front page. Here's what comes with your Elevate website, and what you can add when you're ready.
+      </p>
+
+      <span class="doodle-star included-star" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"/>
+        </svg>
+      </span>
+
     </section>
+
     <section class="included-content">
+
       <div class="included-block">
-        <div class="included-block-heading"><span class="number">01</span><div><h2 data-i18n="allPackages">Included with All Packages</h2><p data-i18n="allPackagesDesc">The essential tools and setup for a store that's ready to welcome customers.</p></div></div>
+
+        <div class="included-block-heading">
+          <span class="number">01</span>
+
+          <div>
+            <h2 data-i18n="allPackages">Included with All Packages</h2>
+            <p data-i18n="allPackagesDesc">
+              The essential tools and setup for a store that's ready to welcome customers.
+            </p>
+          </div>
+        </div>
+
         <div class="included-grid">
-          <article class="included-item"><span class="item-icon">✳</span><h3 data-i18n="storeEssentials">Essential Store Pages &amp; Features</h3><p data-i18n="storeEssentialsDesc">Cart, customer login, OTP verification, payment, shipping, checkout, and order confirmation emails.</p></article>
-          <article class="included-item"><span class="item-icon">⌘</span><h3 data-i18n="dashboard">Easy-to-Use Dashboard</h3><p data-i18n="dashboardDesc">Manage your products and orders through a clear, simple store dashboard.</p></article>
-          <article class="included-item"><span class="item-icon">◷</span><h3 data-i18n="support">7 Days of Support</h3><p data-i18n="supportDesc">Get help with your website during the first seven days after delivery.</p></article>
-          <article class="included-item"><span class="item-icon">▣</span><h3 data-i18n="responsive">Mobile &amp; Desktop Optimization</h3><p data-i18n="responsiveDesc">A responsive shopping experience designed to work smoothly across screen sizes.</p></article>
-          <article class="included-item"><span class="item-icon">↗</span><h3 data-i18n="seo">SEO Optimization</h3><p data-i18n="seoDesc">Foundational search optimization to help customers discover your store.</p></article>
+
+          <article class="included-item">
+            <span class="item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8Z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3 data-i18n="storeEssentials">Essential Store Pages &amp; Features</h3>
+            <p data-i18n="storeEssentialsDesc">
+              Cart, customer login, OTP verification, payment, shipping, checkout, and order confirmation emails.
+            </p>
+          </article>
+
+          <article class="included-item">
+            <span class="item-icon">⌘</span>
+            <h3 data-i18n="dashboard">Easy-to-Use Dashboard</h3>
+            <p data-i18n="dashboardDesc">
+              Manage your products and orders through a clear, simple store dashboard.
+            </p>
+          </article>
+
+          <article class="included-item">
+            <span class="item-icon">◷</span>
+            <h3 data-i18n="support">7 Days of Support</h3>
+            <p data-i18n="supportDesc">
+              Get help with your website during the first seven days after delivery.
+            </p>
+          </article>
+
+          <article class="included-item">
+            <span class="item-icon">▣</span>
+            <h3 data-i18n="responsive">Mobile &amp; Desktop Optimization</h3>
+            <p data-i18n="responsiveDesc">
+              A responsive shopping experience designed to work smoothly across screen sizes.
+            </p>
+          </article>
+
+          <article class="included-item">
+            <span class="item-icon">↗</span>
+            <h3 data-i18n="seo">SEO Optimization</h3>
+            <p data-i18n="seoDesc">
+              Foundational search optimization to help customers discover your store.
+            </p>
+          </article>
+
         </div>
       </div>
+
       <div class="included-block addons-block">
-        <div class="included-block-heading"><span class="number">02</span><div><h2 data-i18n="optionalAddons">Optional Add-ons</h2><p data-i18n="optionalAddonsDesc">Extra flexibility when your brand needs more.</p></div></div>
+
+        <div class="included-block-heading">
+          <span class="number">02</span>
+
+          <div>
+            <h2 data-i18n="optionalAddons">Optional Add-ons</h2>
+            <p data-i18n="optionalAddonsDesc">
+              Extra flexibility when your brand needs more.
+            </p>
+          </div>
+        </div>
+
         <div class="addon-list">
-          <article><span class="addon-mark">＋</span><div><h3 data-i18n="dualLanguage">Dual-Language Website</h3><p data-i18n="dualLanguageDesc">Offer your store in two languages so you can reach a wider audience.</p></div></article>
-          <article><span class="addon-mark">＋</span><div><h3 data-i18n="extraProducts">Additional 10 Products</h3><p data-i18n="extraProductsDesc">Expand your catalog beyond the product allowance in your selected package.</p></div></article>
-          <article><span class="addon-mark">＋</span><div><h3 data-i18n="shopifyTheme">Existing Shopify Theme Change</h3><p data-i18n="shopifyThemeDesc">Refresh the look and feel of an existing Shopify website with a new theme.</p></div></article>
+
+          <article>
+            <span class="addon-mark">＋</span>
+            <div>
+              <h3 data-i18n="dualLanguage">Dual-Language Website</h3>
+              <p data-i18n="dualLanguageDesc">
+                Offer your store in two languages so you can reach a wider audience.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span class="addon-mark">＋</span>
+            <div>
+              <h3 data-i18n="extraProducts">Additional 10 Products</h3>
+              <p data-i18n="extraProductsDesc">
+                Expand your catalog beyond the product allowance in your selected package.
+              </p>
+            </div>
+          </article>
+
+          <article>
+            <span class="addon-mark">＋</span>
+            <div>
+              <h3 data-i18n="shopifyTheme">Existing Shopify Theme Change</h3>
+              <p data-i18n="shopifyThemeDesc">
+                Refresh the look and feel of an existing Shopify website with a new theme.
+              </p>
+            </div>
+          </article>
+
         </div>
       </div>
+
       <div class="included-cta">
-        <span class="doodle-star cta-spark">✳</span><h2 data-i18n-html="readyTitle">Ready to build something <em>good?</em></h2><p data-i18n="readyDesc">Tell us about your brand and we'll help you find the right fit.</p><a class="button button-dark contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsTalk">Let's Talk <span>→</span></a>
+
+        <span class="doodle-star cta-spark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5Z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linejoin="round"/>
+          </svg>
+        </span>
+
+        <h2 data-i18n-html="readyTitle">Ready to build something <em>good?</em></h2>
+
+        <p data-i18n="readyDesc">
+          Tell us about your brand and we'll help you find the right fit.
+        </p>
+
+        <a class="button button-dark contact-link"
+           href="https://www.instagram.com/elevate.egp/"
+           target="_blank"
+           rel="noopener"
+           data-i18n="letsTalk">
+
+          Let's Talk
+
+          <span class="button-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 12H20M13 5L20 12L13 19"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+            </svg>
+          </span>
+
+        </a>
+
       </div>
-      <p class="more-work included-more"><span data-i18n="moreWork">Want to see more? Explore more website designs and projects on our Instagram</span> <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a> <span class="tiny-spark">✳</span></p>
+
+      <p class="more-work included-more">
+        <span data-i18n="moreWork">
+          Want to see more? Explore more website designs and projects on our Instagram
+        </span>
+
+        <a href="https://www.instagram.com/elevate.egp/"
+           target="_blank"
+           rel="noopener">@elevate.egp</a>
+
+        <span class="tiny-spark">✳</span>
+      </p>
+
     </section>
+
   </main>
+
   <footer class="site-footer compact-footer">
-    <div class="footer-brand"><a class="footer-logo" href="index.html">Elevate.</a><p data-i18n="footerTagline">We create. You elevate.</p><p class="footer-about" data-i18n="footerAbout">Digital design and e-commerce solutions that help brands grow.</p><a class="instagram-handle" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">◎ &nbsp;@elevate.egp</a></div>
-    <div class="footer-links"><h4 data-i18n="quickLinks">Quick Links</h4><a href="index.html#home" data-i18n="navHome">Home</a><a href="index.html#packages" data-i18n="navPackages">Packages</a><a href="included.html" data-i18n="whatsIncluded">What's Included?</a><a href="index.html#faq" data-i18n="navFaq">FAQ</a></div>
-    <div class="footer-links"><h4 data-i18n="ourServices">Our Services</h4><a href="index.html#packages" data-i18n-html="serviceOne">E-commerce Websites</a><a class="contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n-html="serviceTwo">AI Product Videos</a><a class="contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="serviceThree">Landing Pages</a></div>
-    <div class="footer-bottom"><span>© <span id="year"></span> Elevate. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n-html="powered">Powered by <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a></span></div>
+
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html">Elevate.</a>
+      <p data-i18n="footerTagline">We create. You elevate.</p>
+      <p class="footer-about" data-i18n="footerAbout">
+        Digital design and e-commerce solutions that help brands grow.
+      </p>
+      <a class="instagram-handle"
+         href="https://www.instagram.com/elevate.egp/"
+         target="_blank"
+         rel="noopener">◎ &nbsp;@elevate.egp</a>
+    </div>
+
+    <div class="footer-links">
+      <h4 data-i18n="quickLinks">Quick Links</h4>
+      <a href="index.html#home" data-i18n="navHome">Home</a>
+      <a href="index.html#packages" data-i18n="navPackages">Packages</a>
+      <a href="included.html" data-i18n="whatsIncluded">What's Included?</a>
+      <a href="index.html#faq" data-i18n="navFaq">FAQ</a>
+    </div>
+
+    <div class="footer-links">
+      <h4 data-i18n="ourServices">Our Services</h4>
+      <a href="index.html#packages" data-i18n-html="serviceOne">E-commerce Websites</a>
+      <a class="contact-link"
+         href="https://www.instagram.com/elevate.egp/"
+         target="_blank"
+         rel="noopener"
+         data-i18n-html="serviceTwo">AI Product Videos</a>
+      <a class="contact-link"
+         href="https://www.instagram.com/elevate.egp/"
+         target="_blank"
+         rel="noopener"
+         data-i18n="serviceThree">Landing Pages</a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © <span id="year"></span> Elevate.
+        <span data-i18n="rights">All rights reserved.</span>
+      </span>
+
+      <span data-i18n-html="powered">
+        Powered by
+        <a href="https://www.instagram.com/elevate.egp/"
+           target="_blank"
+           rel="noopener">@elevate.egp</a>
+      </span>
+    </div>
+
   </footer>
+
   <script src="script.js"></script>
-</body></html>
+
+</body>
+</html>
