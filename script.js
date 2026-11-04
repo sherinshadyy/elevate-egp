@@ -1,160 +1,69 @@
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
-const languageButton = document.getElementById("language-toggle");
-
 const translations = {
-  en: {
-    navServices:"Our Services", navProcess:"Our Process", navContact:"Get in Touch",
-    heroEyebrow:"BUILD · ELEVATE · GROW", heroTitle:"Custom E-Commerce<br>Solutions &amp; More",
-    heroDescription:"We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.",
-    heroButton:"Explore Our Packages", packagesEyebrow:"OUR PACKAGES",
-    packagesTitle:"Choose the Perfect Plan for Your Business",
-    basicTitle:"Basic Website", basicDescription:"A clean and simple solution to get your business online.",
-    basic1:"Clean & simple website design", basic2:"Up to 10 products (you can add more!)",
-    basic3:"Basic essential pages (Home, About Us & Terms)", basic4:"1 minor revision",
-    standardTitle:"Standard Website", standardDescription:"A professional website with more flexibility.",
-    standard1:"Branded & customized design", standard2:"Up to 2 custom sections per page (Home, About Us, Terms)",
-    standard3:"Up to 15 products (you can add more!)", standard4:"2 minor revisions",
-    premiumTitle:"Premium Website", premiumDescription:"A fully customized experience for your brand.",
-    premium1:"Fully customized concept & branded design", premium2:"Up to 20 products (you can add more!)",
-    premium3:"Custom Home, About Us & Terms pages", premium4:"Up to 5 custom sections on the homepage",
-    premium5:"Animations & interactions", premium6:"3 minor revisions",
-    popular:"Most Popular", getStarted:"Get Started", detailsButton:"What’s Included?",
-    aiEyebrow:"MAKE YOUR PRODUCTS STAND OUT", aiTitle:"AI Photoshoot",
-    aiDescription:"Turn your products into stunning AI-generated visuals.", aiDuration:"◷ 10 Seconds",
-    ai1:"Realistic & aesthetic results", ai2:"Enhance your brand story", ai3:"Perfect for social media & ads",
-    landingEyebrow:"A FIRST IMPRESSION THAT CONVERTS", landingTitle:"Landing Pages",
-    landingDescription:"High-converting landing pages to turn visitors into customers.",
-    landing1:"Custom design", landing2:"Compelling content", landing3:"Designed for results",
-    whyEyebrow:"WHY ELEVATE", whyTitle:"Everything Your Online Store Needs",
-    whyIntro:"More than a website — the essentials to help your business move forward.",
-    benefit1Title:"Custom design", benefit1:"A website designed around your brand instead of a generic template.",
-    benefit2Title:"Product management", benefit2:"Products, prices, descriptions and store content can be managed after launch.",
-    benefit3Title:"SEO & analytics", benefit3:"Basic SEO setup and analytics so your store is ready to be discovered and measured.",
-    benefit4Title:"Store setup", benefit4:"We help put the essential pieces together so your ecommerce website is ready to launch.",
-    processEyebrow:"HOW IT WORKS", processTitle:"From Idea to Online",
-    processIntro:"A clear, collaborative process from the first conversation to launch.",
-    step1Title:"Discover", step1:"We understand your brand, products and what your customers need.",
-    step2Title:"Design", step2:"We shape the visual direction and create the main store experience.",
-    step3Title:"Build", step3:"Your pages, products and ecommerce functionality are put together.",
-    step4Title:"Launch", step4:"We make sure everything is ready and help you move forward.",
-    closingEyebrow:"YOUR NEXT CHAPTER STARTS HERE", closingTitle:"Let’s Elevate Your Business Together",
-    closingButton:"Contact Us", footerTagline:"Build · Elevate · Grow", footerInstagram:"Instagram",
-    footerRights:"All rights reserved."
-  },
-  ar: {
-    navServices:"خدماتنا", navProcess:"مراحل العمل", navContact:"تواصل معنا",
-    heroEyebrow:"ابدأ · ارتقِ · انطلق", heroTitle:"حلول متكاملة للتجارة الإلكترونية<br>والمزيد",
-    heroDescription:"نصمم مواقع إلكترونية احترافية، وفيديوهات بالذكاء الاصطناعي، وصفحات هبوط تساعد مشروعك على النمو والتميز.",
-    heroButton:"اكتشف باقاتنا", packagesEyebrow:"باقاتنا",
-    packagesTitle:"اختار الباقة المناسبة لمشروعك",
-    basicTitle:"الموقع الأساسي", basicDescription:"حل بسيط وأنيق لبدء تواجد مشروعك على الإنترنت.",
-    basic1:"تصميم موقع بسيط وأنيق", basic2:"حتى 10 منتجات (يمكنك إضافة المزيد!)",
-    basic3:"الصفحات الأساسية (الرئيسية، من نحن، الشروط والأحكام)", basic4:"تعديل بسيط واحد",
-    standardTitle:"الموقع الاحترافي", standardDescription:"موقع احترافي بمساحة أكبر للتخصيص.",
-    standard1:"تصميم مخصص يعكس هوية علامتك التجارية", standard2:"حتى قسمين مخصصين لكل صفحة (الرئيسية، من نحن، الشروط)",
-    standard3:"حتى 15 منتجًا (يمكنك إضافة المزيد!)", standard4:"تعديلان بسيطان",
-    premiumTitle:"الموقع المميز", premiumDescription:"تجربة متكاملة ومخصصة بالكامل لعلامتك التجارية.",
-    premium1:"فكرة وتصميم مخصصان بالكامل لهوية علامتك", premium2:"حتى 20 منتجًا (يمكنك إضافة المزيد!)",
-    premium3:"صفحات مخصصة للرئيسية ومن نحن والشروط", premium4:"حتى 5 أقسام مخصصة في الصفحة الرئيسية",
-    premium5:"حركات وتفاعلات بصرية", premium6:"3 تعديلات بسيطة",
-    popular:"الأكثر طلبًا", getStarted:"ابدأ الآن", detailsButton:"ما الذي تتضمنه الباقات؟",
-    aiEyebrow:"اجعل منتجاتك أكثر تميزًا", aiTitle:"تصوير المنتجات بالذكاء الاصطناعي",
-    aiDescription:"حوّل منتجاتك إلى صور وفيديوهات إبداعية باستخدام الذكاء الاصطناعي.", aiDuration:"◷ 10 ثوانٍ",
-    ai1:"نتائج واقعية وجذابة", ai2:"إبراز قصة علامتك التجارية", ai3:"مثالية للسوشيال ميديا والإعلانات",
-    landingEyebrow:"انطباع أول يحوّل الزوار إلى عملاء", landingTitle:"صفحات الهبوط",
-    landingDescription:"صفحات هبوط مصممة لجذب الزوار وتحويلهم إلى عملاء.",
-    landing1:"تصميم مخصص", landing2:"محتوى جذاب", landing3:"تصميم يركز على تحقيق النتائج",
-    whyEyebrow:"لماذا ELEVATE؟", whyTitle:"كل ما يحتاجه متجرك الإلكتروني",
-    whyIntro:"أكثر من مجرد موقع إلكتروني — كل الأساسيات التي تساعد مشروعك على التقدم.",
-    benefit1Title:"تصميم مخصص", benefit1:"موقع مصمم خصيصًا لعلامتك التجارية، وليس مجرد قالب تقليدي.",
-    benefit2Title:"إدارة المنتجات", benefit2:"يمكنك إدارة المنتجات والأسعار والأوصاف ومحتوى المتجر بعد الإطلاق.",
-    benefit3Title:"تحسين محركات البحث والتحليلات", benefit3:"إعدادات SEO أساسية وتحليلات تساعد على اكتشاف متجرك وقياس أدائه.",
-    benefit4Title:"إعداد المتجر", benefit4:"نجهز العناصر الأساسية ليكون متجرك الإلكتروني مستعدًا للإطلاق.",
-    processEyebrow:"كيف نعمل؟", processTitle:"من الفكرة إلى الإطلاق",
-    processIntro:"خطوات واضحة وتعاون مستمر من أول تواصل وحتى إطلاق موقعك.",
-    step1Title:"التعرّف على مشروعك", step1:"نفهم علامتك التجارية ومنتجاتك واحتياجات عملائك.",
-    step2Title:"التصميم", step2:"نحدد الاتجاه البصري ونصمم تجربة المتجر الأساسية.",
-    step3Title:"التنفيذ", step3:"نعمل على تجهيز الصفحات والمنتجات ووظائف المتجر الإلكتروني.",
-    step4Title:"الإطلاق", step4:"نتأكد من جاهزية كل شيء ونساعدك على الانطلاق.",
-    closingEyebrow:"خطوتك القادمة تبدأ من هنا", closingTitle:"خلينا نطوّر مشروعك مع بعض",
-    closingButton:"تواصل معنا", footerTagline:"ابدأ · ارتقِ · انطلق", footerInstagram:"إنستجرام",
-    footerRights:"جميع الحقوق محفوظة."
-  }
+en: {
+navHome:"Home",navServices:"Services",navPackages:"Packages",navDifference:"Why Elevate",navFaq:"FAQ",letsTalk:"Let's Talk",
+heroEyebrow:"DIGITAL DESIGN & E-COMMERCE SOLUTIONS",heroLine1:"We Create.",heroLine2:"You Elevate.",heroDescription:"We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.",exploreServices:"Explore Our Services",viewPackages:"View Packages",scrollDown:"Scroll Down",
+sideTitle:"Creative Solutions.<br>Real Business <em>Impact.</em>",sideDescription:"From building your online store to creating visuals that capture attention, we help your brand establish a stronger digital presence.",
+serviceOne:"E-commerce<br>Websites",serviceOneDesc:"Your brand deserves more than a generic online store.",serviceTwo:"AI Product<br>Videos",serviceTwoDesc:"Turn your products into stunning AI-generated visuals.",serviceThree:"Landing Pages",serviceThreeDesc:"A first impression that converts.",explorePackages:"Explore Packages",getAI:"Get Your AI Video",discussProject:"Discuss Your Project",
+packagesTitle:"<span>Find the Perfect Fit</span> for Your Brand.",packagesSubtitle:"From a simple online store to a fully bespoke shopping experience, discover the right solution for your business.",starter:"Starter",advanced:"Advanced",premium:"Premium",starterIntro:"A clean and simple solution to get your business online.",advancedIntro:"A branded website with a more personalized look.",premiumIntro:"A completely bespoke shopping experience.",starterFeature1:"Clean and simple design",starterFeature2:"Up to 10 products",starterFeature3:"Home, About & Terms",starterFeature4:"1 minor revision",advancedFeature1:"Custom Sections",advancedFeature2:"Up to 15 products",advancedFeature3:"Up to 4 sections",advancedFeature4:"Animated text & basic animations",advancedFeature5:"2 minor revisions",premiumFeature1:"Full custom design & styling",premiumFeature2:"Up to 20 products",premiumFeature3:"All essential pages",premiumFeature4:"Advanced animations",premiumFeature5:"Video & pop-ups",premiumFeature6:"2 minor revisions",recommended:"MOST RECOMMENDED",requestQuote:"Request a Quote",visitDemo:"Visit a Demo ↗",demoPassword:"Demo password (all lowercase): elevate",moreWork:"Want to see more? Explore more website designs and projects on our Instagram",
+differenceTitle:"What’s the <em>Difference?</em>",differenceSubtitle:"Every package is designed around your brand. Compare the level of customization and creative freedom.",feature:"Feature",overallDesign:"Overall design",standardPlatform:"Standard platform design",Design:"Full custom design & styling",customBuilt:"Custom-built",customDesigned:"Custom-designed",cartCheckout:"Cart & checkout",none:"None",basicAnimations:"Animated text / basic animations",advancedAnimations:"Advanced animations",brandStyling:"Custom brand styling",customSections:"Custom sections",upTo4:"Up to 4",fullyBespoke:"Fully bespoke",essentialPages:"Home, About & Terms pages",included:"Included",customized:"Customized",individuallyDesigned:"Individually designed",headerNavigation:"Header & navigation",fullyCustomized:"Fully customized",standardDesign:"Standard design",productPages:"Product pages",styled:"Styled",animations:"Animations & interactions",basic:"Basic",yes:"Yes",videoIntegration:"Video integration",optional:"Optional",customPopups:"Custom pop-ups",productsUploaded:"Products uploaded",revisions:"Revisions",starterNote:"A simple, polished foundation for your online store.",advancedNote:"More room to shape the website around your brand.",premiumNote:"A fully tailored Shopify experience with greater creative freedom.",needMore:"NEED THE FULL BREAKDOWN?",includedHeading:"Everything that’s<br><em>included.</em>",includedIntro:"See the essentials included with every package, plus optional add-ons to make your store do more.",whatsIncluded:"What's Included?",
+essentialsTitle:"<em>Everything</em> Your Online Store Needs.",essentialsSubtitle:"More than a website — the essentials to help your business move forward.",essentialOne:"Custom Design",essentialOneDesc:"A website designed around your brand.",essentialTwo:"Product Management",essentialTwoDesc:"Manage products and content easily.",essentialThree:"SEO & Analytics",essentialThreeDesc:"Get discovered and measure your growth.",essentialFour:"Store Setup",essentialFourDesc:"Launch with confidence.",
+faqTitle:"Frequently Asked <em>Questions.</em>",faqSubtitle:"Find answers to the most common questions about our services.",faq1:"Which website package should I choose?",faq1a:"Starter is a great foundation, Advanced offers more custom sections, and Premium is for a fully bespoke Shopify experience.",faq2:"What is the difference between Advanced and Premium?",faq2a:"Advanced is built on Wuilt with expanded styling and sections. Premium is built on Shopify with a more deeply customized experience.",faq3:"Can I add more products after delivery?",faq3a:"Yes. You can manage your products through your store dashboard, or contact us if you need help adding more.",faq4:"Is the domain included?",faq4a:"Domain registration is handled separately and depends on the domain you choose.",faq5:"Do you provide support after delivery?",faq5a:"Every package includes seven days of support after delivery.",stillQuestions:"Still have questions?",talkInstagram:"Let's talk on <em>Instagram!</em>",visitInstagram:"Visit Our Instagram",
+footerHeadline:"Your Brand <em>Deserves</em><br>to <span>Stand Out.</span>",footerDescription:"Let’s turn your ideas into a digital experience your customers won’t forget.",letsBuild:"Let's Build Something",contactElevate:"Contact Elevate",footerTagline:"We create. You elevate.",footerAbout:"Digital design and e-commerce solutions that help brands grow.",quickLinks:"Quick Links",ourServices:"Our Services",rights:"All rights reserved.",powered:'Powered by <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a>',
+backPackages:"Back to packages",includedEyebrow:"THE DETAILS THAT MAKE IT COMPLETE",includedTitle:"What's <em>Included?</em>",includedLead:"Every store needs more than a beautiful front page. Here's what comes with your Elevate website, and what you can add when you're ready.",allPackages:"Included with All Packages",allPackagesDesc:"The essential tools and setup for a store that's ready to welcome customers.",storeEssentials:"Essential Store Pages & Features",storeEssentialsDesc:"Cart, customer login, OTP verification, payment, shipping, checkout, and order confirmation emails.",dashboard:"Easy-to-Use Dashboard",dashboardDesc:"Manage your products and orders through a clear, simple store dashboard.",support:"7 Days of Support",supportDesc:"Get help with your website during the first seven days after delivery.",responsive:"Mobile & Desktop Optimization",responsiveDesc:"A responsive shopping experience designed to work smoothly across screen sizes.",seo:"SEO Optimization",seoDesc:"Foundational search optimization to help customers discover your store.",optionalAddons:"Optional Add-ons",optionalAddonsDesc:"Extra flexibility when your brand needs more.",dualLanguage:"Dual-Language Website",dualLanguageDesc:"Offer your store in two languages so you can reach a wider audience.",extraProducts:"Additional 10 Products",extraProductsDesc:"Expand your catalog beyond the product allowance in your selected package.",shopifyTheme:"Existing Shopify Theme Change",shopifyThemeDesc:"Refresh the look and feel of an existing Shopify website with a new theme.",readyTitle:"Ready to build something <em>good?</em>",readyDesc:"Tell us about your brand and we'll help you find the right fit."
+},
+ar: {
+navHome:"الرئيسية",navServices:"خدماتنا",navPackages:"الباقات",navDifference:"لماذا إيليفيت؟",navFaq:"الأسئلة الشائعة",letsTalk:"تواصل معنا",
+heroEyebrow:"حلول متكاملة للتصميم والتجارة الإلكترونية",heroLine1:"نصمم مواقع",heroLine2:"تعكس قوة متجرك.",heroDescription:"نصمم مواقع إلكترونية احترافية، وفيديوهات بالذكاء الاصطناعي، وصفحات هبوط تساعد مشروعك على النمو والتميز.",exploreServices:"اكتشف خدماتنا",viewPackages:"استعرض الباقات",scrollDown:"اكتشف المزيد",
+sideTitle:"حلول إبداعية.<br>وتأثير حقيقي <em>على أعمالك.</em>",sideDescription:"من إنشاء متجرك الإلكتروني إلى تصميم محتوى بصري يجذب الانتباه، نساعد علامتك التجارية على بناء حضور رقمي أقوى.",
+serviceOne:"متاجر إلكترونية",serviceOneDesc:"علامتك التجارية تستحق أكثر من متجر إلكتروني تقليدي.",serviceTwo:"فيديوهات منتجات بالذكاء الاصطناعي",serviceTwoDesc:"حوّل منتجاتك إلى محتوى بصري مذهل بالذكاء الاصطناعي.",serviceThree:"صفحات الهبوط",serviceThreeDesc:"انطباع أول يحوّل الزوار إلى عملاء.",explorePackages:"استعرض الباقات",getAI:"اطلب فيديو بالذكاء الاصطناعي",discussProject:"ناقش مشروعك",
+packagesTitle:"<span>اختر الباقة المناسبة</span> لعلامتك التجارية.",packagesSubtitle:"من متجر إلكتروني بسيط إلى تجربة تسوق مصممة بالكامل، اكتشف الحل المناسب لمشروعك.",starter:"ستارتر",advanced:"أدفانسد",premium:"بريميوم",starterIntro:"حل بسيط وأنيق لبدء نشاطك التجاري أونلاين.",advancedIntro:"موقع بهوية مميزة وتصميم أكثر تخصيصًا.",premiumIntro:"تجربة تسوق مصممة بالكامل لتناسب علامتك التجارية.",starterFeature1:"تصميم بسيط وأنيق",starterFeature2:"حتى 10 منتجات",starterFeature3:"الرئيسية، من نحن، والشروط",starterFeature4:"تعديل بسيط واحد",advancedFeature1:"أقسام مخصصة",advancedFeature2:"حتى 15 منتجًا",advancedFeature3:"حتى 4 أقسام",advancedFeature4:"نصوص متحركة وحركات بسيطة",advancedFeature5:"تعديلان بسيطان",premiumFeature1:"تصميم وتنسيق مخصص بالكامل",premiumFeature2:"حتى 20 منتجًا",premiumFeature3:"كل الصفحات الأساسية",premiumFeature4:"حركات متقدمة",premiumFeature5:"فيديوهات ونوافذ منبثقة",premiumFeature6:"تعديلان بسيطان",recommended:"الباقة الأكثر ترشيحًا",requestQuote:"اطلب عرضًا",visitDemo:"شاهد نموذجًا ↗",demoPassword:"كلمة مرور النموذج (بحروف إنجليزية صغيرة): elevate",moreWork:"هل تريد مشاهدة المزيد؟ اكتشف المزيد من تصميمات المواقع ومشاريعنا على إنستجرام",
+differenceTitle:"ما <em>الاختلاف؟</em>",differenceSubtitle:"كل باقة مصممة حول علامتك التجارية. قارن مستوى التخصيص والحرية الإبداعية.",feature:"الميزة",overallDesign:"التصميم العام",standardPlatform:"تصميم المنصة الأساسي",halfPlatform:"  تصميم المنصة الأساسي مع اقسام مخصصه",fullCustomDesign:"تصميم مخصص بالكامل ",customBuilt:"أقسام مصممة خصيصًا",customDesigned:"تصميم مخصص",cartCheckout:"سلة التسوق وإتمام الطلب",none:"بدون حركات",basicAnimations:"نصوص متحركة / حركات بسيطة",advancedAnimations:"حركات متقدمة",brandStyling:"تنسيق متوافق مع الهوية",customSections:"الأقسام المخصصة",upTo4:"حتى 4 أقسام",fullyBespoke:"تخصيص كامل",essentialPages:"الرئيسية، من نحن، والشروط",included:"متوفر",customized:"مخصص",individuallyDesigned:"مصمم بشكل منفصل",headerNavigation:"القائمة والتنقل",fullyCustomized:"مخصص بالكامل",standardDesign:"تصميم أساسي",productPages:"صفحات المنتجات",styled:"منسقة",animations:"الحركات والتفاعلات",basic:"أساسية",yes:"نعم",videoIntegration:"دمج الفيديو",optional:"اختياري",customPopups:"النوافذ المنبثقة",productsUploaded:"عدد المنتجات المضافة",revisions:"التعديلات",starterNote:"أساس بسيط وأنيق لمتجرك الإلكتروني.",advancedNote:"مساحة أكبر لتشكيل الموقع بما يناسب علامتك التجارية.",premiumNote:"تجربة شوبيفاي مصممة بالكامل بحرية إبداعية أكبر.",needMore:"هل تريد معرفة كل التفاصيل؟",includedHeading:"كل ما هو<br><em>متضمن.</em>",includedIntro:"اكتشف الأساسيات المتوفرة في كل باقة، بالإضافة إلى الإضافات الاختيارية.",whatsIncluded:"ما الذي تتضمنه الباقات؟",
+essentialsTitle:"<em>كل ما يحتاجه</em> متجرك الإلكتروني.",essentialsSubtitle:"أكثر من مجرد موقع — أساسيات تساعد مشروعك على التقدم.",essentialOne:"تصميم مخصص",essentialOneDesc:"موقع مصمم حول هوية علامتك التجارية.",essentialTwo:"إدارة المنتجات",essentialTwoDesc:"إدارة المنتجات والمحتوى بسهولة.",essentialThree:"تحسين محركات البحث",essentialThreeDesc:"ساعد العملاء في الوصول إلى متجرك وتابع نموك.",essentialFour:"إعداد المتجر",essentialFourDesc:"ابدأ بثقة.",
+faqTitle:"الأسئلة <em>الشائعة.</em>",faqSubtitle:"إجابات عن أكثر الأسئلة شيوعًا حول خدماتنا.",faq1:"كيف أختار باقة الموقع المناسبة؟",faq1a:"ستارتر بداية مناسبة، وأدفانسد توفر أقسامًا مخصصة أكثر، أما بريميوم فهي تجربة شوبيفاي مصممة بالكامل.",faq2:"ما الفرق بين أدفانسد وبريميوم؟",faq2a:"أدفانسد مبنية على منصة ويلت مع تخصيصات وأقسام إضافية. بريميوم مبنية على شوبيفاي وتوفر تجربة أكثر تخصيصًا.",faq3:"هل يمكنني إضافة منتجات بعد التسليم؟",faq3a:"نعم، يمكنك إدارة المنتجات من لوحة تحكم المتجر أو التواصل معنا لمساعدتك في إضافة المزيد.",faq4:"هل الدومين متضمن؟",faq4a:"يتم حجز الدومين بشكل منفصل حسب اسم النطاق الذي تختاره.",faq5:"هل توفرون دعمًا بعد التسليم؟",faq5a:"كل الباقات تتضمن سبعة أيام من الدعم بعد التسليم.",stillQuestions:"هل لديك أسئلة أخرى؟",talkInstagram:"تواصل معنا عبر <em>إنستجرام!</em>",visitInstagram:"زوروا إنستجرام",
+footerHeadline:"علامتك التجارية <em>تستحق</em><br>أن <span>تتميز.</span>",footerDescription:"لنحوّل أفكارك إلى تجربة رقمية لا ينساها عملاؤك.",letsBuild:"لنبدأ بناء مشروعك",contactElevate:"تواصل مع إيليفيت",footerTagline:"حلول رقمية ترتقي بأعمالك.",footerAbout:"نساعد العلامات التجارية على بناء حضور رقمي قوي من خلال تصميم المواقع وتطوير المتاجر الإلكترونية.",quickLinks:"روابط سريعة",ourServices:"خدماتنا",rights:"جميع الحقوق محفوظة.",powered:'بدعم من <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a>',
+backPackages:"العودة إلى الباقات",includedEyebrow:"التفاصيل التي تجعل متجرك متكاملًا",includedTitle:"ماذا <em>تتضمن الباقات؟</em>",includedLead:"كل متجر يحتاج إلى أكثر من واجهة جميلة. إليك ما يأتي مع موقعك من إيليفيت، وما يمكنك إضافته عند الحاجة.",allPackages:"متوفر في جميع الباقات",allPackagesDesc:"الأدوات والإعدادات الأساسية لتجهيز متجرك لاستقبال العملاء.",storeEssentials:"صفحات وخصائص المتجر الأساسية",storeEssentialsDesc:"سلة التسوق، تسجيل دخول العملاء، التحقق برمز OTP، الدفع، الشحن، إتمام الطلب، ورسائل تأكيد الطلب عبر البريد الإلكتروني.",dashboard:"لوحة تحكم سهلة الاستخدام",dashboardDesc:"إدارة المنتجات والطلبات من خلال لوحة تحكم واضحة وبسيطة.",support:"7 أيام من الدعم",supportDesc:"نقدم المساعدة لموقعك خلال أول سبعة أيام بعد التسليم.",responsive:"متوافق مع الهاتف والكمبيوتر",responsiveDesc:"تجربة تسوق متجاوبة تعمل بسلاسة على مختلف أحجام الشاشات.",seo:"تحسين محركات البحث",seoDesc:"إعدادات أساسية لتحسين ظهور متجرك في نتائج البحث.",optionalAddons:"إضافات اختيارية",optionalAddonsDesc:"مرونة إضافية عندما تحتاج علامتك التجارية إلى المزيد.",dualLanguage:"موقع بلغتين",dualLanguageDesc:"اعرض متجرك بلغتين للوصول إلى جمهور أوسع.",extraProducts:"10 منتجات إضافية",extraProductsDesc:"وسّع كتالوج منتجاتك بما يتجاوز العدد المحدد في الباقة.",shopifyTheme:"تغيير قالب متجر شوبيفاي الحالي",shopifyThemeDesc:"جدّد شكل وتجربة موقع شوبيفاي الحالي باستخدام قالب جديد.",readyTitle:"هل أنت مستعد لبناء شيء <em>مميز؟</em>",readyDesc:"أخبرنا عن علامتك التجارية وسنساعدك في اختيار الحل المناسب." 
+}
 };
 
-const selectors = {
- navServices:".nav-links a[href='#packages']", navProcess:".nav-links a[href='#process']",
- navContact:".nav-contact [data-never]", heroEyebrow:".hero .eyebrow",
- heroTitle:".hero h1", heroDescription:".hero-description", heroButton:".hero .dark-button",
- packagesEyebrow:".packages .section-heading .eyebrow", packagesTitle:".packages h2",
- basicTitle:".package-card:nth-child(1) h3", basicDescription:".package-card:nth-child(1) .package-top p",
- basic1:".package-card:nth-child(1) li:nth-child(1)", basic2:".package-card:nth-child(1) li:nth-child(2)",
- basic3:".package-card:nth-child(1) li:nth-child(3)", basic4:".package-card:nth-child(1) li:nth-child(4)",
- standardTitle:".package-card:nth-child(2) h3", standardDescription:".package-card:nth-child(2) .package-top p",
- standard1:".package-card:nth-child(2) li:nth-child(1)", standard2:".package-card:nth-child(2) li:nth-child(2)",
- standard3:".package-card:nth-child(2) li:nth-child(3)", standard4:".package-card:nth-child(2) li:nth-child(4)",
- premiumTitle:".package-card:nth-child(3) h3", premiumDescription:".package-card:nth-child(3) .package-top p",
- premium1:".package-card:nth-child(3) li:nth-child(1)", premium2:".package-card:nth-child(3) li:nth-child(2)",
- premium3:".package-card:nth-child(3) li:nth-child(3)", premium4:".package-card:nth-child(3) li:nth-child(4)",
- premium5:".package-card:nth-child(3) li:nth-child(5)", premium6:".package-card:nth-child(3) li:nth-child(6)",
- popular:".popular", getStarted:".package-button", detailsButton:".package-details-link",
- aiEyebrow:".ai-feature .eyebrow", aiTitle:".ai-feature h2", aiDescription:".ai-feature .service-copy>p:not(.eyebrow)",
- aiDuration:".duration", ai1:".ai-feature li:nth-child(1)", ai2:".ai-feature li:nth-child(2)", ai3:".ai-feature li:nth-child(3)",
- landingEyebrow:".landing-feature .eyebrow", landingTitle:".landing-feature h2",
- landingDescription:".landing-feature .service-copy>p:not(.eyebrow)",
- landing1:".landing-feature li:nth-child(1)", landing2:".landing-feature li:nth-child(2)", landing3:".landing-feature li:nth-child(3)",
- whyEyebrow:".why .eyebrow", whyTitle:".why h2", whyIntro:".why .section-intro",
- benefit1Title:".benefit:nth-child(1) h3", benefit1:".benefit:nth-child(1) p",
- benefit2Title:".benefit:nth-child(2) h3", benefit2:".benefit:nth-child(2) p",
- benefit3Title:".benefit:nth-child(3) h3", benefit3:".benefit:nth-child(3) p",
- benefit4Title:".benefit:nth-child(4) h3", benefit4:".benefit:nth-child(4) p",
- processEyebrow:".process .eyebrow", processTitle:".process h2", processIntro:".process .section-intro",
- step1Title:".process-step:nth-child(1) h3", step1:".process-step:nth-child(1) p",
- step2Title:".process-step:nth-child(2) h3", step2:".process-step:nth-child(2) p",
- step3Title:".process-step:nth-child(3) h3", step3:".process-step:nth-child(3) p",
- step4Title:".process-step:nth-child(4) h3", step4:".process-step:nth-child(4) p",
- closingEyebrow:".closing .eyebrow", closingTitle:".closing h2", closingButton:".closing .dark-button",
- footerTagline:"footer p", footerInstagram:".footer-instagram span", footerRights:"footer small"
-};
-const original = new Map();
-function setButtonLabel(el, label) {
-  if (!el) return;
-  const textNode = Array.from(el.childNodes).find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
-  if (textNode) textNode.textContent = label + " ";
-  else el.insertBefore(document.createTextNode(label + " "), el.firstChild);
+function applyLanguage(lang) {
+  const dict = translations[lang] || translations.en;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.body.classList.toggle("arabic", lang === "ar");
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    const selected = btn.dataset.lang === lang;
+    btn.classList.toggle("selected", selected);
+    btn.setAttribute("aria-pressed", String(selected));
+  });
+  try { localStorage.setItem("elevate-language", lang); } catch(e) {}
 }
-function setLanguage(lang) {
-  const dict=translations[lang];
-  document.documentElement.lang=lang;
-  document.documentElement.dir=lang==="ar"?"rtl":"ltr";
-  document.body.classList.toggle("is-arabic",lang==="ar");
-  for (const [key,selector] of Object.entries(selectors)) {
-    const elements=document.querySelectorAll(selector);
-    elements.forEach(el=>{
-      if (!original.has(el)) original.set(el,el.innerHTML);
-      if(key==="navContact" || key==="getStarted" || key==="heroButton" || key==="closingButton") return;
-      else if(key==="footerRights") {
-        const year=el.querySelector("#year"); el.innerHTML=`© ${year?.textContent||new Date().getFullYear()} elevate.egp. ${dict[key]}`;
-      } else el.innerHTML=dict[key];
-    });
-  }
-  const contact=document.querySelector(".nav-contact");
-  setButtonLabel(contact, dict.navContact);
-  document.querySelectorAll(".package-button").forEach(el => setButtonLabel(el, dict.getStarted));
-  setButtonLabel(document.querySelector(".hero .dark-button"), dict.heroButton);
-  setButtonLabel(document.querySelector(".closing .dark-button"), dict.closingButton);
-  languageButton.textContent=lang==="en"?"AR":"EN";
-  languageButton.setAttribute("aria-label",lang==="en"?"Switch to Arabic":"Switch to English");
-  localStorage.setItem("elevate-language",lang);
+document.querySelectorAll(".lang-btn").forEach(btn => btn.addEventListener("click", () => applyLanguage(btn.dataset.lang)));
+let savedLanguage = "en";
+try { savedLanguage = localStorage.getItem("elevate-language") || "en"; } catch(e) {}
+applyLanguage(savedLanguage);
+document.getElementById("year")?.replaceChildren(document.createTextNode(new Date().getFullYear()));
+
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".desktop-nav");
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.classList.toggle("is-open", open);
+  });
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    nav.classList.remove("nav-open"); toggle.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false");
+  }));
 }
-languageButton?.addEventListener("click",()=>setLanguage(document.documentElement.lang==="en"?"ar":"en"));
-menuButton?.addEventListener("click",()=>{
- const open=menuButton.getAttribute("aria-expanded")==="true";
- menuButton.setAttribute("aria-expanded",String(!open)); nav.classList.toggle("open",!open);
-});
-nav?.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
- nav.classList.remove("open");menuButton.setAttribute("aria-expanded","false");
+document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener("click", e => {
+  const target = document.querySelector(link.getAttribute("href"));
+  if (target) { e.preventDefault(); target.scrollIntoView({behavior:"smooth",block:"start"}); }
 }));
-const year=document.getElementById("year"); if(year) year.textContent=new Date().getFullYear();
-setLanguage(localStorage.getItem("elevate-language")||"en");
