@@ -42,17 +42,16 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
   .section{margin-top:32px}
   .section h2{font-size:20px}
   .section-sub{font-size:11px}
-  .table-wrap:after{content:"Swipe horizontally to compare →";display:block;padding:7px 10px;color:var(--muted);font-size:10px;border-top:1px solid var(--line);white-space:nowrap}
-  .ar .table-wrap:after{content:"اسحب أفقيًا للمقارنة ←";text-align:right}
   .section-head{align-items:flex-start;flex-direction:column;gap:8px}
-  /* Keep the same conventional comparison table on mobile; allow horizontal swipe when needed. */
-  .table-wrap{display:block;overflow-x:auto;overflow-y:hidden;border:1px solid var(--line);border-radius:8px;background:#fff;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-  .price-table{display:table;width:100%;min-width:640px;border-collapse:collapse;table-layout:fixed}
+  /* Keep the complete conventional comparison table visible on mobile without horizontal scrolling. */
+  .table-wrap{display:block;width:100%;overflow:visible;border:1px solid var(--line);border-radius:8px;background:#fff}
+  .price-table{display:table;width:100%;min-width:0;border-collapse:collapse;table-layout:fixed}
   .price-table thead{display:table-header-group}
   .price-table tbody{display:table-row-group}
   .price-table tr{display:table-row;background:#fff}
-  .price-table th,.price-table td{display:table-cell;padding:10px 11px;font-size:10.5px;overflow-wrap:break-word;vertical-align:top}
-  .price-table th:first-child,.price-table td:first-child{width:22%;white-space:normal}
+  .price-table th,.price-table td{display:table-cell;padding:9px 8px;font-size:10px;line-height:1.4;overflow-wrap:anywhere;word-break:normal;vertical-align:top}
+  .price-table th:first-child,.price-table td:first-child{width:20%;white-space:normal}
+  .price-table th:nth-child(2),.price-table td:nth-child(2),.price-table th:nth-child(3),.price-table td:nth-child(3){width:40%}
   .price-table td:nth-child(2),.price-table td:nth-child(3){padding-top:10px;position:static}
   .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{content:none!important}
   .price-table td:nth-child(2){border-right:0}
@@ -78,7 +77,9 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
   .wrap{width:calc(100% - 24px)}
   .logo{font-size:17px}
   .lang,.contact{font-size:10px;padding:7px 8px}
-  .price-table td{padding:10px 8px;font-size:10px}
+  .price-table th,.price-table td{padding:8px 6px;font-size:9.5px;line-height:1.35}
+  .price-table th:first-child,.price-table td:first-child{width:20%}
+  .price-table th:nth-child(2),.price-table td:nth-child(2),.price-table th:nth-child(3),.price-table td:nth-child(3){width:40%}
 }
 </style>
 </head>
@@ -142,7 +143,7 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 
 <section class="section" id="landing">
 <div class="section-head"><div><h2 data-en="Landing page" data-ar="صفحة هبوط">Landing page</h2><p class="section-sub" data-en="A focused, single-page website made to present one offer, product or campaign." data-ar="صفحة واحدة مركزة لعرض منتج أو خدمة أو عرض تسويقي بشكل واضح.">A focused, single-page website made to present one offer, product or campaign.</p></div></div>
-<div class="landing"><div><h3 data-en="One page. One clear goal." data-ar="صفحة واحدة وهدف واضح.">One page. One clear goal.</h3><p data-en="A standalone landing page designed around your campaign or business objective. Includes 2 design concepts." data-ar="صفحة مستقلة مصممة بما يناسب حملتك الإعلانية أو هدف مشروعك، مع اختيار من بين فكرتين للتصميم.">A standalone landing page designed around your campaign or business objective. Includes 2 design concepts.</p>
+<div class="landing"><div><h3 data-en="One page. One clear goal." data-ar="صفحة واحدة وهدف واضح.">One page. One clear goal.</h3><p data-en="A standalone landing page designed around your campaign or business objective. Includes 2 design concepts." data-ar="صفحة مستقلة مصممة بما يناسب حملتك الإعلانية أو هدف مشروعك، مع اختيار من بين فكرتين للتصميم.">A standalone landing page designed around your campaign or business objective. Includes 2 design concepts.</p></div><span class="price">3,000 EGP</span></div>
 </section>
 
 <section class="section">
