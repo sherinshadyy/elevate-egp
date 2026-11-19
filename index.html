@@ -46,19 +46,21 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
   .table-wrap{overflow:visible;border:0;background:transparent}
   .price-table{display:block;width:100%;min-width:0;border-collapse:separate;border-spacing:0}
   .price-table thead{display:none}
-  .price-table tbody{display:grid;gap:12px}
-  .price-table tr{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-  .price-table td{display:block;min-width:0;padding:11px 10px;font-size:11px;overflow-wrap:anywhere;border-bottom:1px solid var(--line)}
-  .price-table td:first-child{grid-column:1/-1;width:auto;white-space:normal;background:#f5f3ee;font-size:10px;letter-spacing:.3px;color:#5e5c55;padding:8px 10px}
-  .price-table td:nth-child(2),.price-table td:nth-child(3){padding-top:29px;position:relative}
-  .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{position:absolute;top:8px;left:10px;font-size:10px;font-weight:800;color:var(--accent)}
-  #packages .price-table td:nth-child(2)::before{content:"BASIC"}
-  #packages .price-table td:nth-child(3)::before{content:"ADVANCED"}
-  #shopify .price-table td:nth-child(2)::before{content:"STARTER"}
-  #shopify .price-table td:nth-child(3)::before{content:"PREMIUM"}
-  .price-table td:nth-child(2){border-right:1px solid var(--line)}
-  .ar .price-table td:nth-child(2){border-right:0;border-left:1px solid var(--line)}
-  .ar .price-table td:nth-child(2)::before,.ar .price-table td:nth-child(3)::before{left:auto;right:10px}
+  .price-table tbody{display:grid;gap:10px}
+  .price-table tr{display:block;background:#fff;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+  .price-table td{display:block;min-width:0;padding:10px 12px;font-size:12px;line-height:1.5;overflow-wrap:anywhere;border-bottom:1px solid #efeee9}
+  .price-table td:first-child{width:auto;white-space:normal;background:#f5f3ee;font-size:11px;letter-spacing:.2px;color:#5e5c55;font-weight:800;padding:9px 12px}
+  .price-table td:nth-child(2),.price-table td:nth-child(3){padding-top:9px}
+  .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{display:block;margin-bottom:5px;font-size:9px;letter-spacing:1px;font-weight:800;color:var(--accent)}
+  #packages .price-table td:nth-child(2)::before{content:"BASIC PACKAGE"}
+  #packages .price-table td:nth-child(3)::before{content:"ADVANCED PACKAGE"}
+  #shopify .price-table td:nth-child(2)::before{content:"STARTER PACKAGE"}
+  #shopify .price-table td:nth-child(3)::before{content:"PREMIUM PACKAGE"}
+  .ar #packages .price-table td:nth-child(2)::before{content:"الباقة الأساسية"}
+  .ar #packages .price-table td:nth-child(3)::before{content:"الباقة المتقدمة"}
+  .ar #shopify .price-table td:nth-child(2)::before{content:"باقة ستارتر"}
+  .ar #shopify .price-table td:nth-child(3)::before{content:"باقة بريميوم"}
+  .price-table td:last-child{border-bottom:0}
   .price-table tr:last-child td{border-bottom:0}
   .feature{line-height:1.45;margin:3px 0}
   .demo-link{font-size:10px;padding:7px 8px}
@@ -81,8 +83,7 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
   .logo{font-size:17px}
   .lang,.contact{font-size:10px;padding:7px 8px}
   .price-table td{padding:10px 8px;font-size:10px}
-  .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{left:8px}
-  .ar .price-table td:nth-child(2)::before,.ar .price-table td:nth-child(3)::before{right:8px}
+  .price-table td{padding:9px 10px;font-size:11px}
 }
 </style>
 </head>
@@ -146,7 +147,7 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 
 <section class="section" id="landing">
 <div class="section-head"><div><h2 data-en="Landing page" data-ar="صفحة هبوط">Landing page</h2><p class="section-sub" data-en="A focused, single-page website made to present one offer, product or campaign." data-ar="صفحة واحدة مركزة لعرض منتج أو خدمة أو عرض تسويقي بشكل واضح.">A focused, single-page website made to present one offer, product or campaign.</p></div></div>
-<div class="landing"><div><h3 data-en="One page. One clear goal." data-ar="صفحة واحدة وهدف واضح.">One page. One clear goal.</h3><p data-en="A standalone landing page designed around your campaign or business objective. Includes 2 design concepts." data-ar="صفحة مستقلة مصممة بما يناسب حملتك الإعلانية أو هدف مشروعك، مع اختيار من بين فكرتين للتصميم.">A standalone landing page designed around your campaign or business objective. Includes 2 design concepts.</p>
+<div class="landing"><div><h3 data-en="One page. One clear goal." data-ar="صفحة واحدة وهدف واضح.">One page. One clear goal.</h3><p data-en="A standalone landing page designed around your campaign or business objective. Includes 2 design concepts." data-ar="صفحة مستقلة مصممة بما يناسب حملتك الإعلانية أو هدف مشروعك، مع اختيار من بين فكرتين للتصميم.">A standalone landing page designed around your campaign or business objective. Includes 2 design concepts.</p></div><span class="price">3,000 EGP</span></div>
 </section>
 
 <section class="section">
