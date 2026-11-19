@@ -1,728 +1,118 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Elevate creates thoughtful e-commerce websites, AI product videos and landing pages for ambitious brands.">
-  <meta name="theme-color" content="#f5e9df">
-  <title>Elevate — We Create. You Elevate.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-  <style>
-    /* Consistent vector doodles: crisp on desktop and mobile */
-    .doodle-svg {
-      display: block;
-      flex: 0 0 auto;
-      width: 1.15em;
-      height: 1.15em;
-      overflow: visible;
-      vertical-align: middle;
-    }
-
-    /* Keep every arrow a crisp SVG icon, never a text/emoji glyph. */
-    .arrow-svg {
-      display: block !important;
-      width: 18px !important;
-      height: 18px !important;
-      min-width: 18px;
-      font-family: sans-serif;
-      overflow: visible;
-    }
-
-    .arrow-svg path {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.8;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .inline-arrow,
-    .button-demo > .arrow-svg {
-      flex: 0 0 18px;
-    }
-
-    .doodle-star-svg {
-      width: 1em;
-      height: 1em;
-    }
-
-    .inline-arrow,
-    .scroll-arrow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-    }
-
-    .inline-arrow .arrow-svg {
-      width: 1.05em;
-      height: 1.05em;
-    }
-
-    .scroll-arrow .arrow-svg {
-      width: 1.2em;
-      height: 1.2em;
-    }
-
-    .arrow-up-svg {
-      width: 1em;
-      height: 1em;
-      margin-left: .15em;
-    }
-
-    /* Better circle positioning around Impact */
-    .impact-highlight {
-      position: relative;
-      display: inline-block;
-      isolation: isolate;
-      white-space: nowrap;
-      padding: .02em .18em;
-      line-height: 1.25;
-    }
-
-    .impact-highlight::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      pointer-events: none;
-      left: -.12em;
-      right: -.12em;
-      top: -.10em;
-      bottom: -.10em;
-      border: 2px solid currentColor;
-      border-radius: 50%;
-      transform: rotate(-7deg);
-      opacity: .9;
-    }
-
-    @media (max-width: 600px) {
-      .impact-highlight {
-        padding-inline: .16em;
-      }
-
-      .impact-highlight::after {
-        left: -.09em;
-        right: -.09em;
-        top: -.07em;
-        bottom: -.07em;
-        border-width: 1.6px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Elevate.egp builds professional online stores on Wuilt and Shopify, tailored to your budget.">
+<title>Elevate.egp — Online Store Design</title>
+<style>
+:root{--ink:#252522;--muted:#77766f;--line:#e8e6e0;--paper:#fbfaf7;--white:#fff;--accent:#a58b62;--soft:#f2efe8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}
+header{height:72px;border-bottom:1px solid var(--line);background:rgba(251,250,247,.96);display:flex;align-items:center;position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{font-size:21px;font-weight:800;letter-spacing:-1px;text-decoration:none}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:24px}.navlinks a{text-decoration:none;font-size:13px;color:#5f5e58}.navright{display:flex;align-items:center;gap:10px}
+.lang{border:1px solid var(--line);background:white;padding:8px 12px;border-radius:5px;cursor:pointer;font:inherit;font-size:12px}.contact{background:var(--ink);color:white!important;text-decoration:none;padding:9px 15px;border-radius:5px;font-size:12px}
+main{padding:43px 0 64px}.intro{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
+.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);font-weight:800}.intro h1{font-size:clamp(31px,4.5vw,45px);line-height:1.12;letter-spacing:-1.6px;margin:8px 0 10px;max-width:650px}.intro p{margin:0;color:var(--muted);max-width:610px;font-size:14px}
+.intro-side{max-width:205px;color:var(--muted);font-size:12px;border-left:1px solid var(--line);padding-left:17px}
+.section{margin-top:42px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:14px}.section h2{font-size:22px;letter-spacing:-.5px;margin:0}.section-sub{font-size:12px;color:var(--muted);margin:3px 0 0}.platform-label{font-size:10px;letter-spacing:1.6px;color:var(--accent);font-weight:800;text-transform:uppercase}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:white}.price-table{width:100%;border-collapse:collapse;min-width:700px}.price-table th,.price-table td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:12px}.price-table th{background:#f5f3ee;font-size:11px;color:#5e5c55;font-weight:750}.price-table tr:last-child td{border-bottom:0}.price-table td:first-child{font-weight:700;width:17%;white-space:nowrap}
+.price{font-size:18px;font-weight:800;letter-spacing:-.4px;display:block;margin-bottom:2px}.small{font-size:10px;color:var(--muted);font-weight:400}.feature{display:block;margin:3px 0;color:#55544e}.feature:before{content:"•";color:var(--accent);margin-right:6px}
+.demo-link{display:inline-block;margin-top:9px;padding:6px 10px;border:1px solid #d9d4c9;border-radius:4px;text-decoration:none;font-size:10px;font-weight:700;color:#393832;background:#fff}.demo-link:hover{background:var(--soft)}
+.note{font-size:11px;color:var(--muted);margin:9px 2px 0}.included{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:13px}.included div{border:1px solid var(--line);border-radius:7px;background:white;padding:12px;font-size:11px;color:#55544e}.included strong{display:block;color:var(--ink);font-size:11px;margin-bottom:2px}
+.landing{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--line);background:white;border-radius:8px;padding:19px 22px}.landing h3{margin:0 0 3px;font-size:16px}.landing p{margin:0;color:var(--muted);font-size:12px}.landing .price{font-size:21px;margin:0;white-space:nowrap}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.process article{padding:15px;border:1px solid var(--line);border-radius:7px;background:white}.process b{font-size:12px}.process p{font-size:11px;color:var(--muted);margin:4px 0 0}
+.cta{margin-top:43px;background:var(--ink);color:white;border-radius:9px;padding:24px 26px;display:flex;justify-content:space-between;align-items:center;gap:18px}.cta h2{margin:0;font-size:21px}.cta p{margin:4px 0 0;color:#c5c3bc;font-size:12px}.cta a{background:white;color:var(--ink);padding:10px 15px;border-radius:5px;text-decoration:none;font-size:12px;font-weight:750;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:10px}.foot{display:flex;justify-content:space-between;gap:14px}
+.ar{direction:rtl;text-align:right}.ar .intro-side{border-left:0;border-right:1px solid var(--line);padding-left:0;padding-right:17px}.ar .feature:before{margin-right:0;margin-left:6px}.ar .price-table th,.ar .price-table td{text-align:right}.ar .price-table td:first-child{white-space:normal}.ar .navlinks{direction:rtl}.ar .cta{direction:rtl}.ar .landing{direction:rtl}
+@media(max-width:720px){.navlinks{display:none}.intro{display:block}.intro-side{margin-top:16px;max-width:none}.included{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.foot{flex-direction:column}.price-table th,.price-table td{padding:12px}.wrap{width:min(100% - 28px,1080px)}main{padding-top:32px}}
+</style>
 </head>
-
 <body>
-  <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="Elevate home">Elevate<span>.</span></a>
-
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a class="active" href="#home" data-i18n="navHome">Home</a>
-      <a href="#services" data-i18n="navServices">Services</a>
-      <a href="#packages" data-i18n="navPackages">Packages</a>
-      <a href="#difference" data-i18n="navDifference">Why Elevate</a>
-      <a href="#faq" data-i18n="navFaq">FAQ</a>
-    </nav>
-
-    <div class="header-actions">
-      <div class="language-switch" aria-label="Language">
-        <button class="lang-btn selected" data-lang="en" aria-pressed="true">EN</button>
-        <span>/</span>
-        <button class="lang-btn" data-lang="ar" aria-pressed="false">AR</button>
-      </div>
-
-      <a class="button button-dark header-cta contact-link"
-         href="https://www.instagram.com/elevate.egp/"
-         target="_blank" rel="noopener" data-i18n="letsTalk">Let's Talk</a>
-
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero split-grid" id="home">
-      <div class="hero-left panel">
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow">DIGITAL DESIGN &amp; E-COMMERCE SOLUTIONS</p>
-
-          <h1>
-            <span data-i18n="heroLine1">We Create.</span><br>
-            <em data-i18n="heroLine2">You Elevate.</em>
-            <span class="scribble underline-hero" aria-hidden="true"></span>
-          </h1>
-
-          <span class="doodle-star star-hero" aria-hidden="true">
-            <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-                    stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-            </svg>
-          </span>
-
-          <p class="hero-description" data-i18n="heroDescription">
-            We create stunning, high-performing websites, AI videos, and landing pages to help your business grow and stand out.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="button button-dark" href="#services" data-i18n="exploreServices">Explore Our Services</a>
-            <a class="button button-outline" href="#packages" data-i18n="viewPackages">View Packages</a>
-          </div>
-        </div>
-
-        <a class="scroll-cue" href="#services">
-<span class="scroll-arrow">
-  <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-down-svg"
-       viewBox="0 0 24 24"
-       fill="none"
-       xmlns="http://www.w3.org/2000/svg"
-       aria-hidden="true">
-    <path d="M12 3V20M5 13L12 20L19 13"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
-  </svg>
-</span>
-          <span data-i18n="scrollDown">Scroll Down</span>
-        </a>
-
-        <div class="hero-wave" aria-hidden="true"></div>
-      </div>
-
-      <div class="hero-right panel">
-        <span class="doodle-star star-small" aria-hidden="true">
-          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-                  stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-          </svg>
-        </span>
-
-        <p class="hero-side-title" data-i18n-html="sideTitle">
-          Creative Solutions.<br>Real Business <em class="impact-highlight">Impact</em>.
-        </p>
-
-        <p class="side-description" data-i18n="sideDescription">
-          From building your online store to creating visuals that capture attention, we help your brand establish a stronger digital presence.
-        </p>
-
-        <div class="service-preview" id="services">
-          <article>
-            <span class="number">01</span>
-            <h3 data-i18n-html="serviceOne">E-commerce<br>Websites</h3>
-            <p data-i18n="serviceOneDesc">Your brand deserves more than a generic online store.</p>
-            <a href="#packages" class="text-link">
-              <span data-i18n="explorePackages">Explore Packages</span>
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-          </article>
-
-          <article>
-            <span class="number">02</span>
-            <h3 data-i18n-html="serviceTwo">AI Product<br>Videos</h3>
-            <p data-i18n="serviceTwoDesc">Turn your products into stunning AI-generated visuals.</p>
-            <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener">
-              <span data-i18n="getAI">Get Your AI Video</span>
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-          </article>
-
-          <article>
-            <span class="number">03</span>
-            <h3 data-i18n="serviceThree">Landing Pages</h3>
-            <p data-i18n="serviceThreeDesc">A first impression that converts.</p>
-            <a href="https://www.instagram.com/elevate.egp/" class="text-link contact-link" target="_blank" rel="noopener">
-              <span data-i18n="discussProject">Discuss Your Project</span>
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="packages-section panel" id="packages">
-      <div class="section-heading">
-        <h2 data-i18n-html="packagesTitle"><span>Find the Perfect Fit</span> for Your Brand.</h2>
-        <p data-i18n="packagesSubtitle">
-          From a simple online store to a fully bespoke shopping experience, discover the right solution for your business.
-        </p>
-      </div>
-
-      <div class="package-grid">
-        <article class="package-card">
-          <div class="package-heading">
-            <h3 data-i18n="starter">Starter</h3>
-            <span class="platform">Wuilt</span>
-          </div>
-
-          <p class="package-intro" data-i18n="starterIntro">A clean and simple solution to get your business online.</p>
-
-          <ul class="feature-list">
-            <li data-i18n="starterFeature1">Clean and simple design</li>
-            <li data-i18n="starterFeature2">Up to 10 products</li>
-            <li data-i18n="starterFeature3">Home, About &amp; Terms</li>
-            <li data-i18n="starterFeature4">1 minor revision</li>
-          </ul>
-
-          <div class="card-actions">
-            <a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
-              Request a Quote
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-
-            <a class="button button-demo" href="https://cmubu12fe006s01i3gxyq15l7.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">
-              Visit a Demo
-              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M8 7H17V16"
-                      stroke="currentColor" stroke-width="1.8"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="package-card">
-          <div class="package-heading">
-            <h3 data-i18n="advanced">Advanced</h3>
-            <span class="platform">Wuilt</span>
-          </div>
-
-          <p class="package-intro" data-i18n="advancedIntro">A branded website with a more personalized look.</p>
-
-          <ul class="feature-list">
-            <li data-i18n="advancedFeature1">Custom Sections</li>
-            <li data-i18n="advancedFeature2">Up to 15 products</li>
-            <li data-i18n="advancedFeature3">Up to 4 sections</li>
-            <li data-i18n="advancedFeature4">Animated text &amp; basic animations</li>
-            <li data-i18n="advancedFeature5">2 minor revisions</li>
-          </ul>
-
-          <div class="card-actions">
-            <a class="button button-outline" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
-              Request a Quote
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-
-            <a class="button button-demo" href="https://cmunxmz9k06qw01hw3mqf13jw.wuiltstore.com/en" target="_blank" rel="noopener" data-i18n="visitDemo">
-              Visit a Demo
-              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M8 7H17V16"
-                      stroke="currentColor" stroke-width="1.8"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-        </article>
-
-        <article class="package-card package-featured">
-          <span class="recommended" data-i18n="recommended">MOST RECOMMENDED</span>
-
-          <div class="package-heading">
-            <h3 data-i18n="premium">Premium</h3>
-            <span class="platform">Shopify</span>
-          </div>
-
-          <p class="package-intro" data-i18n="premiumIntro">A completely bespoke shopping experience.</p>
-
-          <ul class="feature-list">
-            <li data-i18n="premiumFeature1">Full custom design &amp; styling</li>
-            <li data-i18n="premiumFeature2">Up to 20 products</li>
-            <li data-i18n="premiumFeature3">All essential pages</li>
-            <li data-i18n="premiumFeature4">Advanced animations</li>
-            <li data-i18n="premiumFeature5">Video &amp; pop-ups</li>
-            <li data-i18n="premiumFeature6">2 minor revisions</li>
-          </ul>
-
-          <div class="card-actions">
-            <a class="button button-dark" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="requestQuote">
-              Request a Quote
-              <span class="inline-arrow">
-                <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 12H19M12 5L19 12L12 19"
-                        stroke="currentColor" stroke-width="1.8"
-                        stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </a>
-
-            <a class="button button-demo" href="https://summer-fridays-rbpsct7r.myshopify.com" target="_blank" rel="noopener" data-i18n="visitDemo">
-              Visit a Demo
-              <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg arrow-up-svg" viewBox="0 0 24 24" fill="none">
-                <path d="M7 17L17 7M8 7H17V16"
-                      stroke="currentColor" stroke-width="1.8"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-
-            <small class="demo-password" data-i18n="demoPassword">Demo password (all lowercase): elevate</small>
-          </div>
-        </article>
-      </div>
-
-      <div class="included-button-row">
-        <a class="button button-dark" href="included.html" data-i18n="whatsIncluded">
-          What's Included?
-          <span class="inline-arrow">
-            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12H19M12 5L19 12L12 19"
-                    stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </a>
-      </div>
-
- <p class="more-work">
-  <svg aria-hidden="true" focusable="false" class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
-       fill="none" aria-hidden="true">
-    <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-          stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linejoin="round"/>
-  </svg>
-
-  <span data-i18n="moreWork">
-    Want to see more? Explore more website designs and projects on our Instagram
-  </span>
-
-  <a href="https://www.instagram.com/elevate.egp/"
-     target="_blank"
-     rel="noopener">
-    @elevate.egp
-  </a>
-
-  <svg aria-hidden="true" focusable="false" class="doodle-svg tiny-spark-svg" viewBox="0 0 24 24"
-       fill="none" aria-hidden="true">
-    <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-          stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linejoin="round"/>
-  </svg>
-</p>
-    </section>
-
-    <section class="difference-section split-grid" id="difference">
-      <div class="difference-left panel">
-        <div class="section-heading">
-          <h2 data-i18n-html="differenceTitle">What’s the <em>Difference?</em></h2>
-          <p data-i18n="differenceSubtitle">
-            Every package is designed around your brand. Compare the level of customization and creative freedom.
-          </p>
-        </div>
-
-        <div class="comparison-wrap">
-          <table class="comparison-table">
-            <thead>
-              <tr>
-                <th data-i18n="feature">Feature</th>
-                <th data-i18n="starter">Starter</th>
-                <th data-i18n="advanced">Advanced</th>
-                <th data-i18n="premium">Premium</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <tr>
-                <td data-i18n="overallDesign">Overall design</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="halfPlatform">Standard platform design with custom sections</td>
-                <td data-i18n="fullCustomDesign">Full custom design &amp; styling</td>
-              </tr>
-              <tr>
-                <td data-i18n="customSections">Custom sections</td>
-                <td>—</td>
-                <td data-i18n="upTo4">Up to 4</td>
-                <td data-i18n="customBuilt">Custom-built</td>
-              </tr>
-              <tr>
-                <td data-i18n="essentialPages">Home, About &amp; Terms pages</td>
-                <td data-i18n="included">Included</td>
-                <td data-i18n="included">Included</td>
-                <td data-i18n="included">Included</td>
-              </tr>
-              <tr>
-                <td data-i18n="headerNavigation">Header &amp; navigation</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="customDesigned">Custom-designed</td>
-              </tr>
-              <tr>
-                <td data-i18n="productPages">Product pages</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="customDesigned">Custom-designed</td>
-              </tr>
-              <tr>
-                <td data-i18n="cartCheckout">Cart &amp; checkout</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="standardPlatform">Standard platform design</td>
-                <td data-i18n="customDesigned">Custom-designed</td>
-              </tr>
-              <tr>
-                <td data-i18n="animations">Animations &amp; interactions</td>
-                <td data-i18n="none">None</td>
-                <td data-i18n="basicAnimations">Animated text / basic animations</td>
-                <td data-i18n="advancedAnimations">Advanced animations</td>
-              </tr>
-              <tr>
-                <td data-i18n="videoIntegration">Video integration</td>
-                <td>—</td>
-                <td>—</td>
-                <td data-i18n="included">Included</td>
-              </tr>
-              <tr>
-                <td data-i18n="customPopups">Custom pop-ups</td>
-                <td>—</td>
-                <td>—</td>
-                <td data-i18n="included">Included</td>
-              </tr>
-              <tr>
-                <td data-i18n="productsUploaded">Products uploaded</td>
-                <td>10</td>
-                <td>15</td>
-                <td>20</td>
-              </tr>
-              <tr>
-                <td data-i18n="revisions">Revisions</td>
-                <td>1</td>
-                <td>2</td>
-                <td>2</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="comparison-notes">
-          <p>
-            <strong data-i18n="starter">Starter</strong><br>
-            <span data-i18n="starterNote">A simple, polished foundation for your online store.</span>
-          </p>
-          <p>
-            <strong data-i18n="advanced">Advanced</strong><br>
-            <span data-i18n="advancedNote">More room to shape the website around your brand.</span>
-          </p>
-          <p>
-            <strong data-i18n="premium">Premium</strong><br>
-            <span data-i18n="premiumNote">A fully tailored Shopify experience with greater creative freedom.</span>
-          </p>
-        </div>
-      </div>
-
-      <aside class="difference-right panel">
-        <span class="doodle-star star-difference">
-          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-                  stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-          </svg>
-        </span>
-
-        <p class="eyebrow" data-i18n="needMore">NEED THE FULL BREAKDOWN?</p>
-        <h2 data-i18n-html="includedHeading">Everything that’s<br><em>included.</em></h2>
-        <p data-i18n="includedIntro">
-          See the essentials included with every package, plus optional add-ons to make your store do more.
-        </p>
-              <div class="included-button-row">
-                <a class="button button-dark" href="included.html" data-i18n="whatsIncluded">
-          What's Included?
-          <span class="inline-arrow">
-            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12H19M12 5L19 12L12 19"
-                    stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </a>
-      </div>
-        <span class="side-doodle" aria-hidden="true">
-          <svg viewBox="0 0 100 24" width="100" height="24"
-               fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 15C15 2 25 25 38 12S62 2 75 13S90 20 98 8"
-                  stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round"/>
-          </svg>
-        </span>
-      </aside>
-    </section>
-
-    <section class="essentials-section panel">
-      <div class="section-heading">
-        <h2 data-i18n-html="essentialsTitle"><em>Everything</em> Your Online Store Needs.</h2>
-        <p data-i18n="essentialsSubtitle">More than a website — the essentials to help your business move forward.</p>
-      </div>
-
-      <div class="essentials-grid">
-        <article>
-          <span class="number">01</span>
-          <h3 data-i18n="essentialOne">Custom Design</h3>
-          <p data-i18n="essentialOneDesc">A website designed around your brand.</p>
-        </article>
-        <article>
-          <span class="number">02</span>
-          <h3 data-i18n="essentialTwo">Product Management</h3>
-          <p data-i18n="essentialTwoDesc">Manage products and content easily.</p>
-        </article>
-        <article>
-          <span class="number">03</span>
-          <h3 data-i18n="essentialThree">SEO &amp; Analytics</h3>
-          <p data-i18n="essentialThreeDesc">Get discovered and measure your growth.</p>
-        </article>
-        <article>
-          <span class="number">04</span>
-          <h3 data-i18n="essentialFour">Store Setup</h3>
-          <p data-i18n="essentialFourDesc">Launch with confidence.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="faq-section panel" id="faq">
-      <div class="faq-main">
-        <div class="section-heading">
-          <h2 data-i18n-html="faqTitle">Frequently Asked <em>Questions.</em></h2>
-          <p data-i18n="faqSubtitle">Find answers to the most common questions about our services.</p>
-        </div>
-
-        <div class="faq-list">
-          <details>
-            <summary data-i18n="faq1">Which website package should I choose?</summary>
-            <p data-i18n="faq1a">Starter is a great foundation, Advanced offers more custom sections, and Premium is for a fully bespoke Shopify experience.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq2">What is the difference between Advanced and Premium?</summary>
-            <p data-i18n="faq2a">Advanced is built on Wuilt with expanded styling and sections. Premium is built on Shopify with a more deeply customized experience.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq3">Can I add more products after delivery?</summary>
-            <p data-i18n="faq3a">Yes. You can manage your products through your store dashboard, or contact us if you need help adding more.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq4">Is the domain included?</summary>
-            <p data-i18n="faq4a">Domain registration is handled separately and depends on the domain you choose.</p>
-          </details>
-          <details>
-            <summary data-i18n="faq5">Do you provide support after delivery?</summary>
-            <p data-i18n="faq5a">Every package includes seven days of support after delivery.</p>
-          </details>
-        </div>
-      </div>
-
-      <aside class="faq-contact">
-        <span class="doodle-star faq-spark">
-          <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-                  stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-          </svg>
-        </span>
-
-        <h3 data-i18n="stillQuestions">Still have questions?</h3>
-        <p data-i18n-html="talkInstagram">Let's talk on <em>Instagram!</em></p>
-
-        <a class="button button-light contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">
-          <span data-i18n="visitInstagram">Visit Our Instagram</span>
-          <span class="inline-arrow">
-            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12H19M12 5L19 12L12 19"
-                    stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </a>
-
-        <small>@elevate.egp</small>
-      </aside>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-cta">
-      <h2 data-i18n-html="footerHeadline">Your Brand <em>Deserves</em><br>to <span>Stand Out.</span></h2>
-
-      <span class="doodle-star footer-star" aria-hidden="true">
-        <svg aria-hidden="true" focusable="false" class="doodle-svg doodle-star-svg" viewBox="0 0 24 24" fill="none">
-          <path d="M12 2.5L14.2 9.8L21.5 12L14.2 14.2L12 21.5L9.8 14.2L2.5 12L9.8 9.8L12 2.5Z"
-                stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-        </svg>
-      </span>
-
-      <p data-i18n="footerDescription">Let’s turn your ideas into a digital experience your customers won’t forget.</p>
-
-      <div class="footer-buttons">
-        <a class="button button-lime contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="letsBuild">
-          Let's Build Something
-          <span class="inline-arrow">
-            <svg aria-hidden="true" focusable="false" class="doodle-svg arrow-svg" viewBox="0 0 24 24" fill="none">
-              <path d="M4 12H19M12 5L19 12L12 19"
-                    stroke="currentColor" stroke-width="1.8"
-                    stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </a>
-
-        <a class="button button-footer-outline contact-link" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-i18n="contactElevate">Contact Elevate</a>
-      </div>
-    </div>
-
-    <div class="footer-brand">
-      <a class="footer-logo" href="#home">Elevate.</a>
-      <p data-i18n="footerTagline">Digital design and e-commerce solutions that help brands grow.</p>
-      <p class="footer-about" data-i18n="footerAbout">Digital design and e-commerce solutions that help brands grow.</p>
-      <a class="instagram-handle" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">◎ &nbsp;@elevate.egp</a>
-    </div>
-
-    <div class="footer-links">
-      <h4 data-i18n="quickLinks">Quick Links</h4>
-      <a href="#home" data-i18n="navHome">Home</a>
-      <a href="#services" data-i18n="navServices">Services</a>
-      <a href="#packages" data-i18n="navPackages">Packages</a>
-      <a href="included.html" data-i18n="whatsIncluded">What's Included?</a>
-      <a href="#faq" data-i18n="navFaq">FAQ</a>
-    </div>
-
-    <div class="footer-links">
-      <h4 data-i18n="ourServices">Our Services</h4>
-      <a href="#packages" data-i18n-html="serviceOne">E-commerce Websites</a>
-      <a href="https://www.instagram.com/elevate.egp/" class="contact-link" target="_blank" rel="noopener" data-i18n-html="serviceTwo">AI Product Videos</a>
-      <a href="https://www.instagram.com/elevate.egp/" class="contact-link" target="_blank" rel="noopener" data-i18n="serviceThree">Landing Pages</a>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Elevate. <span data-i18n="rights">All rights reserved.</span></span>
-      <span data-i18n-html="powered">Powered by <a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener">@elevate.egp</a></span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<header><div class="wrap nav">
+<a class="logo" href="#">elevate<span>.</span>egp</a>
+<nav class="navlinks"><a href="#packages" data-en="Packages" data-ar="الباقات">Packages</a><a href="#included" data-en="What's included" data-ar="الخدمات المشمولة">What's included</a><a href="#dual-language" data-en="Extra service" data-ar="خدمة إضافية">Extra service</a><a href="#landing" data-en="Landing page" data-ar="صفحة هبوط">Landing page</a></nav>
+<div class="navright"><button class="lang" id="langBtn" type="button">العربية</button><a class="contact" href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-en="Contact us" data-ar="تواصل معنا">Contact us</a></div>
+</div></header>
+<main class="wrap" id="content">
+<section class="intro">
+<div><div class="eyebrow" data-en="Websites made for your business" data-ar="متاجر إلكترونية تناسب نشاطك التجاري">Websites made for your business</div>
+<h1 data-en="Your business deserves a better online store." data-ar="مشروعك يستحق متجر إلكتروني يليق بيه.">Your business deserves a better online store.</h1>
+<p data-en="We build professional online stores on Wuilt and Shopify. Choose the platform and package that match your budget, goals and the level of customization you need." data-ar="بنصمم وننفذ متاجر إلكترونية احترافية على ويلت وشوبيفاي. اختار المنصة والباقة المناسبة لميزانيتك وهدفك ومستوى التخصيص اللي محتاجه.">We build professional online stores on Wuilt and Shopify. Choose the platform and package that match your budget, goals and the level of customization you need.</p></div>
+<div class="intro-side" data-en="Clear packages. Transparent pricing. A store designed around your business." data-ar="باقات واضحة وأسعار محددة ومتجر مصمم بما يناسب نشاطك التجاري.">Clear packages. Transparent pricing. A store designed around your business.</div>
+</section>
+
+<section class="section" id="packages">
+<div class="section-head"><div><div class="platform-label">01 / WUILT</div><h2 data-en="Wuilt packages" data-ar="باقات ويلت">Wuilt packages</h2><p class="section-sub" data-en="A practical option for businesses looking for a professional store at an accessible price." data-ar="اختيار عملي للمشروعات اللي محتاجة متجر احترافي بتكلفة مناسبة.">A practical option for businesses looking for a professional store at an accessible price.</p></div></div>
+<div class="table-wrap"><table class="price-table">
+<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Basic — 2,500 EGP" data-ar="Basic — ٢٬٥٠٠ جنيه">Basic — 2,500 EGP</th><th data-en="Advanced — 5,500 EGP" data-ar="Advanced — ٥٬٥٠٠ جنيه">Advanced — 5,500 EGP</th></tr></thead>
+<tbody>
+<tr><td data-en="Design" data-ar="التصميم">Design</td><td><span class="feature" data-en="Wuilt's ready-made white theme with a clean, professional look." data-ar="قالب ويلت الأبيض الجاهز بتنسيق بسيط واحترافي.">Wuilt's ready-made white theme with a clean, professional look.</span><span class="feature" data-en="Styled using the reference examples and colors you share." data-ar="يتم تنسيق المتجر بناءً على المراجع والألوان التي تشاركها معنا.">Styled using the reference examples and colors you share.</span></td><td><span class="feature" data-en="Wuilt's theme, enhanced with customized sections to better suit your brand." data-ar="قالب ويلت مع أقسام مخصصة لتناسب هوية البراند بشكل أفضل.">Wuilt's theme, enhanced with customized sections to better suit your brand.</span><span class="feature" data-en="Animations and a more tailored page layout, based on your shared references and colors." data-ar="إضافة حركات وتنسيق أكثر تخصيصًا بناءً على المراجع والألوان التي تشاركها معنا.">Animations and a more tailored page layout, based on your shared references and colors.</span></td></tr>
+<tr><td data-en="Products" data-ar="المنتجات">Products</td><td data-en="Up to 5 products" data-ar="حتى ٥ منتجات">Up to 5 products</td><td data-en="Up to 10 products" data-ar="حتى ١٠ منتجات">Up to 10 products</td></tr>
+<tr><td data-en="Pages" data-ar="الصفحات">Pages</td><td data-en="Up to 3 pages" data-ar="حتى ٣ صفحات">Up to 3 pages</td><td data-en="Up to 4 pages" data-ar="حتى ٤ صفحات">Up to 4 pages</td></tr>
+<tr><td data-en="Revisions" data-ar="التعديلات">Revisions</td><td data-en="1 revision" data-ar="تعديل واحد">1 revision</td><td data-en="1 revision" data-ar="تعديل واحد">1 revision</td></tr>
+<tr><td data-en="Extra details" data-ar="تفاصيل إضافية">Extra details</td><td data-en="Standard theme layout." data-ar="تنسيق القالب الأساسي.">Standard theme layout.</td><td data-en="Customized footer and additional designed sections." data-ar="فوتر مخصص وأقسام إضافية بتصميم مميز.">Customized footer and additional designed sections.</td></tr>
+<tr><td data-en="See a demo" data-ar="شاهد نموذجًا">See a demo</td><td><a class="demo-link" href="https://cmubu12fe006s01i3gxyq15l7.wuiltstore.com/en" target="_blank" rel="noopener" data-en="Visit demo 1 ↗" data-ar="شاهد النموذج ١ ↗">Visit demo 1 ↗</a></td><td><a class="demo-link" href="https://telofillelevate.wuiltstore.com/en" target="_blank" rel="noopener" data-en="Visit demo 2 ↗" data-ar="شاهد النموذج ٢ ↗">Visit demo 2 ↗</a></td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><div class="platform-label">02 / SHOPIFY</div><h2 data-en="Shopify packages" data-ar="باقات شوبيفاي">Shopify packages</h2><p class="section-sub" data-en="For brands that want more control over their store's look, layout and customer experience." data-ar="للعلامات التجارية اللي محتاجة تحكم أكبر في شكل المتجر وتفاصيله وتجربة العميل.">For brands that want more control over their store's look, layout and customer experience.</p></div></div>
+<div class="table-wrap"><table class="price-table">
+<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Starter — 4,500 EGP" data-ar="Starter — ٤٬٥٠٠ جنيه">Starter — 4,500 EGP</th><th data-en="Premium — 8,000 EGP" data-ar="Premium — ٨٬٠٠٠ جنيه">Premium — 8,000 EGP</th></tr></thead>
+<tbody>
+<tr><td data-en="Design" data-ar="التصميم">Design</td><td><span class="feature" data-en="A customized, professional basic design using your brand colors and visual identity." data-ar="تصميم أساسي احترافي مخصص باستخدام ألوان وهوية البراند.">A customized, professional basic design using your brand colors and visual identity.</span><span class="feature" data-en="Customization of the main store elements and layout." data-ar="تخصيص العناصر الأساسية وتنسيق المتجر.">Customization of the main store elements and layout.</span></td><td><span class="feature" data-en="A fully customized store design — not just a basic theme setup." data-ar="تصميم مخصص بالكامل للمتجر، مش مجرد تعديل على قالب جاهز.">A fully customized store design — not just a basic theme setup.</span><span class="feature" data-en="Animations, videos, pop-ups and a custom loading screen." data-ar="حركات وفيديوهات ونوافذ منبثقة وشاشة تحميل مخصصة.">Animations, videos, pop-ups and a custom loading screen.</span></td></tr>
+<tr><td data-en="Products" data-ar="المنتجات">Products</td><td data-en="Up to 7 products" data-ar="حتى ٧ منتجات">Up to 7 products</td><td data-en="Up to 15 products" data-ar="حتى ١٥ منتجًا">Up to 15 products</td></tr>
+<tr><td data-en="Design concepts" data-ar="أفكار التصميم">Design concepts</td><td data-en="Choose from 2 design concepts." data-ar="اختار من بين فكرتين للتصميم.">Choose from 2 design concepts.</td><td data-en="Choose from 2 design concepts." data-ar="اختار من بين فكرتين للتصميم.">Choose from 2 design concepts.</td></tr>
+<tr><td data-en="Revisions" data-ar="التعديلات">Revisions</td><td data-en="1 revision" data-ar="تعديل واحد">1 revision</td><td data-en="2 revisions" data-ar="تعديلان">2 revisions</td></tr>
+<tr><td data-en="Store features" data-ar="خصائص المتجر">Store features</td><td><span class="feature" data-en="All essential pages, basic navigation menu and cart." data-ar="كل الصفحات الأساسية وقائمة تنقل وسلة مشتريات.">All essential pages, basic navigation menu and cart.</span><span class="feature" data-en="Customized product page." data-ar="تخصيص صفحة المنتج.">Customized product page.</span></td><td><span class="feature" data-en="More advanced visual details and tailored customer experience." data-ar="تفاصيل بصرية أكثر تقدمًا وتجربة عميل مصممة خصيصًا.">More advanced visual details and tailored customer experience.</span></td></tr>
+<tr><td data-en="See a demo" data-ar="شاهد نموذجًا">See a demo</td><td><a class="demo-link" href="https://sejeeg.myshopify.com/" target="_blank" rel="noopener" data-en="Visit demo 1 ↗" data-ar="شاهد النموذج ١ ↗">Visit demo 1 ↗</a></td><td><a class="demo-link" href="https://summer-fridays-rbpsct7r.myshopify.com/" target="_blank" rel="noopener" data-en="Visit demo 2 ↗" data-ar="شاهد النموذج ٢ ↗">Visit demo 2 ↗</a><div class="small" style="margin-top:5px" data-en="Demo password: elevate" data-ar="كلمة مرور العرض: elevate">Demo password: elevate</div></td></tr>
+</tbody></table></div>
+<p class="note" data-en="Additional products can be added to any package for an extra fee." data-ar="يمكن إضافة منتجات إضافية لأي باقة مقابل رسوم إضافية.">Additional products can be added to any package for an extra fee.</p>
+</section>
+
+<section class="section" id="included">
+<div class="section-head"><div><h2 data-en="Included with every store" data-ar="الخدمات المشمولة في كل متجر">Included with every store</h2><p class="section-sub" data-en="The essentials are covered, whichever package you choose." data-ar="الأساسيات متوفرة أيًا كانت الباقة اللي هتختارها.">The essentials are covered, whichever package you choose.</p></div></div>
+<div class="included">
+<div><strong data-en="Payment setup" data-ar="إعداد الدفع">Payment setup</strong><span data-en="Payment methods included." data-ar="إعداد وسائل الدفع.">Payment methods included.</span></div>
+<div><strong data-en="Shipping methods" data-ar="طرق الشحن">Shipping methods</strong><span data-en="Shipping options setup included." data-ar="إعداد طرق وخيارات الشحن.">Shipping options setup included.</span></div>
+<div><strong data-en="Extra products" data-ar="منتجات إضافية">Extra products</strong><span data-en="Available for an additional fee." data-ar="متاحة مقابل رسوم إضافية.">Available for an additional fee.</span></div>
+<div><strong data-en="Domain" data-ar="الدومين">Domain</strong><span data-en="Not included in package prices." data-ar="غير مشمول في سعر الباقة.">Not included in package prices.</span></div>
+</div>
+</section>
+
+<section class="section" id="dual-language">
+<div class="section-head"><div><h2 data-en="Extra service" data-ar="خدمة إضافية">Extra service</h2><p class="section-sub" data-en="Add more functionality to your store whenever you need it." data-ar="ضيف خدمات وخصائص إضافية لمتجرك حسب احتياجك.">Add more functionality to your store whenever you need it.</p></div></div>
+<div class="landing"><div><h3 data-en="Dual-Language Website" data-ar="متجر بلغتين">Dual-Language Website</h3><p data-en="Offer your store in two languages so you can reach a wider audience. Available as an add-on to your chosen package; contact us for pricing." data-ar="قدّم متجرك بلغتين علشان توصل لجمهور أكبر. الخدمة متاحة كإضافة على الباقة اللي تختارها؛ تواصل معنا لمعرفة السعر.">Offer your store in two languages so you can reach a wider audience. Available as an add-on to your chosen package; contact us for pricing.</p></div><span class="price" style="font-size:14px" data-en="Ask for a quote" data-ar="تواصل لمعرفة السعر">Ask for a quote</span></div>
+</section>
+
+<section class="section" id="landing">
+<div class="section-head"><div><h2 data-en="Landing page" data-ar="صفحة هبوط">Landing page</h2><p class="section-sub" data-en="A focused, single-page website made to present one offer, product or campaign." data-ar="صفحة واحدة مركزة لعرض منتج أو خدمة أو عرض تسويقي بشكل واضح.">A focused, single-page website made to present one offer, product or campaign.</p></div></div>
+<div class="landing"><div><h3 data-en="One page. One clear goal." data-ar="صفحة واحدة وهدف واضح.">One page. One clear goal.</h3><p data-en="A standalone landing page designed around your campaign or business objective. Includes 2 design concepts." data-ar="صفحة مستقلة مصممة بما يناسب حملتك الإعلانية أو هدف مشروعك، مع اختيار من بين فكرتين للتصميم.">A standalone landing page designed around your campaign or business objective. Includes 2 design concepts.</p></div><span class="price">3,000 EGP</span></div>
+</section>
+
+<section class="section">
+<div class="section-head"><div><h2 data-en="How it works" data-ar="خطوات العمل">How it works</h2></div></div>
+<div class="process">
+<article><b data-en="01 — Choose your package" data-ar="١ — اختار الباقة">01 — Choose your package</b><p data-en="Select Wuilt or Shopify based on your budget and the features you need." data-ar="اختار ويلت أو شوبيفاي حسب ميزانيتك والخصائص اللي محتاجها.">Select Wuilt or Shopify based on your budget and the features you need.</p></article>
+<article><b data-en="02 — Share your details" data-ar="٢ — ابعت تفاصيل مشروعك">02 — Share your details</b><p data-en="Send your brand details, content, products and preferred style." data-ar="ابعت تفاصيل البراند والمحتوى والمنتجات والستايل المفضل.">Send your brand details, content, products and preferred style.</p></article>
+<article><b data-en="03 — Launch your store" data-ar="٣ — استلم متجرك">03 — Launch your store</b><p data-en="We build your store and prepare it for you to start selling online." data-ar="بننفذ المتجر ونجهزه علشان تبدأ البيع أونلاين.">We build your store and prepare it for you to start selling online.</p></article>
+</div>
+</section>
+
+<section class="cta"><div><h2 data-en="Ready to elevate your business?" data-ar="جاهز تطور مشروعك؟">Ready to elevate your business?</h2><p data-en="Visit our Instagram for more examples, or message us to discuss your store." data-ar="زور إنستجرام علشان تشوف نماذج أكتر أو ابعتلنا رسالة ونتكلم عن متجرك.">Visit our Instagram for more examples, or message us to discuss your store.</p></div><a href="https://www.instagram.com/elevate.egp/" target="_blank" rel="noopener" data-en="Instagram · @elevate.egp ↗" data-ar="إنستجرام · @elevate.egp ↗">Instagram · @elevate.egp ↗</a></section>
+</main>
+<footer><div class="wrap foot"><span>© 2026 elevate.egp</span><span data-en="Professional online stores, built around your business." data-ar="متاجر إلكترونية احترافية مصممة لنشاطك التجاري.">Professional online stores, built around your business.</span></div></footer>
+<script>
+const btn=document.getElementById('langBtn');
+let current='en';
+btn.addEventListener('click',()=>{
+ current=current==='en'?'ar':'en';
+ document.documentElement.lang=current;
+ document.getElementById('content').classList.toggle('ar',current==='ar');
+ document.querySelectorAll('[data-en]').forEach(el=>{el.textContent=el.dataset[current]});
+ btn.textContent=current==='en'?'العربية':'English';
+});
+</script>
+</body></html>
