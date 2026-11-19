@@ -26,7 +26,64 @@ main{padding:43px 0 64px}.intro{display:flex;justify-content:space-between;align
 .cta{margin-top:43px;background:var(--ink);color:white;border-radius:9px;padding:24px 26px;display:flex;justify-content:space-between;align-items:center;gap:18px}.cta h2{margin:0;font-size:21px}.cta p{margin:4px 0 0;color:#c5c3bc;font-size:12px}.cta a{background:white;color:var(--ink);padding:10px 15px;border-radius:5px;text-decoration:none;font-size:12px;font-weight:750;white-space:nowrap}
 footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-size:10px}.foot{display:flex;justify-content:space-between;gap:14px}
 .ar{direction:rtl;text-align:right}.ar .intro-side{border-left:0;border-right:1px solid var(--line);padding-left:0;padding-right:17px}.ar .feature:before{margin-right:0;margin-left:6px}.ar .price-table th,.ar .price-table td{text-align:right}.ar .price-table td:first-child{white-space:normal}.ar .navlinks{direction:rtl}.ar .cta{direction:rtl}.ar .landing{direction:rtl}
-@media(max-width:720px){.navlinks{display:none}.intro{display:block}.intro-side{margin-top:16px;max-width:none}.included{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}.foot{flex-direction:column}.price-table th,.price-table td{padding:12px}.wrap{width:min(100% - 28px,1080px)}main{padding-top:32px}}
+@media(max-width:720px){
+  .wrap{width:calc(100% - 30px)}
+  header{height:auto;min-height:64px;padding:10px 0}
+  .nav{gap:8px;flex-wrap:wrap}
+  .logo{font-size:19px}
+  .navright{gap:7px}
+  .lang,.contact{padding:8px 10px;font-size:11px}
+  .navlinks{display:none}
+  main{padding:28px 0 42px}
+  .intro{display:block;margin-bottom:28px}
+  .intro h1{font-size:clamp(29px,8vw,38px);letter-spacing:-1.1px}
+  .intro p{font-size:13px}
+  .intro-side{margin-top:15px;max-width:none;padding:0 0 0 12px;font-size:11px}
+  .section{margin-top:32px}
+  .section h2{font-size:20px}
+  .section-sub{font-size:11px}
+  .section-head{align-items:flex-start;flex-direction:column;gap:8px}
+  .table-wrap{overflow:visible;border:0;background:transparent}
+  .price-table{display:block;width:100%;min-width:0;border-collapse:separate;border-spacing:0}
+  .price-table thead{display:none}
+  .price-table tbody{display:grid;gap:12px}
+  .price-table tr{display:grid;grid-template-columns:1fr 1fr;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .price-table td{display:block;min-width:0;padding:11px 10px;font-size:11px;overflow-wrap:anywhere;border-bottom:1px solid var(--line)}
+  .price-table td:first-child{grid-column:1/-1;width:auto;white-space:normal;background:#f5f3ee;font-size:10px;letter-spacing:.3px;color:#5e5c55;padding:8px 10px}
+  .price-table td:nth-child(2),.price-table td:nth-child(3){padding-top:29px;position:relative}
+  .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{position:absolute;top:8px;left:10px;font-size:10px;font-weight:800;color:var(--accent)}
+  #packages .price-table td:nth-child(2)::before{content:"BASIC"}
+  #packages .price-table td:nth-child(3)::before{content:"ADVANCED"}
+  #shopify .price-table td:nth-child(2)::before{content:"STARTER"}
+  #shopify .price-table td:nth-child(3)::before{content:"PREMIUM"}
+  .price-table td:nth-child(2){border-right:1px solid var(--line)}
+  .ar .price-table td:nth-child(2){border-right:0;border-left:1px solid var(--line)}
+  .ar .price-table td:nth-child(2)::before,.ar .price-table td:nth-child(3)::before{left:auto;right:10px}
+  .price-table tr:last-child td{border-bottom:0}
+  .feature{line-height:1.45;margin:3px 0}
+  .demo-link{font-size:10px;padding:7px 8px}
+  .note{font-size:10px;line-height:1.5}
+  .included{grid-template-columns:1fr 1fr;gap:8px}
+  .included div{padding:10px;font-size:10px;line-height:1.45}
+  .included strong{font-size:10px}
+  .landing{align-items:flex-start;flex-direction:column;padding:15px;gap:10px}
+  .landing p{font-size:11px}
+  .landing .price{font-size:18px}
+  .process{grid-template-columns:1fr;gap:8px}
+  .process article{padding:13px}
+  .cta{align-items:flex-start;flex-direction:column;padding:20px 17px;margin-top:32px}
+  .cta h2{font-size:19px}
+  .cta a{white-space:normal;text-align:center;max-width:100%}
+  .foot{flex-direction:column;gap:5px}
+}
+@media(max-width:380px){
+  .wrap{width:calc(100% - 24px)}
+  .logo{font-size:17px}
+  .lang,.contact{font-size:10px;padding:7px 8px}
+  .price-table td{padding:10px 8px;font-size:10px}
+  .price-table td:nth-child(2)::before,.price-table td:nth-child(3)::before{left:8px}
+  .ar .price-table td:nth-child(2)::before,.ar .price-table td:nth-child(3)::before{right:8px}
+}
 </style>
 </head>
 <body>
@@ -46,7 +103,7 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 <section class="section" id="packages">
 <div class="section-head"><div><div class="platform-label">01 / WUILT</div><h2 data-en="Wuilt packages" data-ar="باقات ويلت">Wuilt packages</h2><p class="section-sub" data-en="A practical option for businesses looking for a professional store at an accessible price." data-ar="اختيار عملي للمشروعات اللي محتاجة متجر احترافي بتكلفة مناسبة.">A practical option for businesses looking for a professional store at an accessible price.</p></div></div>
 <div class="table-wrap"><table class="price-table">
-<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Basic — 2,500 EGP" data-ar="Basic — ٢٬٥٠٠ جنيه">Basic — 2,500 EGP</th><th data-en="Advanced — 5,500 EGP" data-ar="Advanced — ٥٬٥٠٠ جنيه">Advanced — 5,500 EGP</th></tr></thead>
+<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Basic" data-ar="Basic">Basic</th><th data-en="Advanced" data-ar="Advanced">Advanced</th></tr></thead>
 <tbody>
 <tr><td data-en="Design" data-ar="التصميم">Design</td><td><span class="feature" data-en="Wuilt's ready-made white theme with a clean, professional look." data-ar="قالب ويلت الأبيض الجاهز بتنسيق بسيط واحترافي.">Wuilt's ready-made white theme with a clean, professional look.</span><span class="feature" data-en="Styled using the reference examples and colors you share." data-ar="يتم تنسيق المتجر بناءً على المراجع والألوان التي تشاركها معنا.">Styled using the reference examples and colors you share.</span></td><td><span class="feature" data-en="Wuilt's theme, enhanced with customized sections to better suit your brand." data-ar="قالب ويلت مع أقسام مخصصة لتناسب هوية البراند بشكل أفضل.">Wuilt's theme, enhanced with customized sections to better suit your brand.</span><span class="feature" data-en="Animations and a more tailored page layout, based on your shared references and colors." data-ar="إضافة حركات وتنسيق أكثر تخصيصًا بناءً على المراجع والألوان التي تشاركها معنا.">Animations and a more tailored page layout, based on your shared references and colors.</span></td></tr>
 <tr><td data-en="Products" data-ar="المنتجات">Products</td><td data-en="Up to 5 products" data-ar="حتى ٥ منتجات">Up to 5 products</td><td data-en="Up to 10 products" data-ar="حتى ١٠ منتجات">Up to 10 products</td></tr>
@@ -57,10 +114,10 @@ footer{border-top:1px solid var(--line);padding:18px 0;color:var(--muted);font-s
 </tbody></table></div>
 </section>
 
-<section class="section">
+<section class="section" id="shopify">
 <div class="section-head"><div><div class="platform-label">02 / SHOPIFY</div><h2 data-en="Shopify packages" data-ar="باقات شوبيفاي">Shopify packages</h2><p class="section-sub" data-en="For brands that want more control over their store's look, layout and customer experience." data-ar="للعلامات التجارية اللي محتاجة تحكم أكبر في شكل المتجر وتفاصيله وتجربة العميل.">For brands that want more control over their store's look, layout and customer experience.</p></div></div>
 <div class="table-wrap"><table class="price-table">
-<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Starter — 4,500 EGP" data-ar="Starter — ٤٬٥٠٠ جنيه">Starter — 4,500 EGP</th><th data-en="Premium — 8,000 EGP" data-ar="Premium — ٨٬٠٠٠ جنيه">Premium — 8,000 EGP</th></tr></thead>
+<thead><tr><th data-en="Package" data-ar="الباقة">Package</th><th data-en="Starter" data-ar="Starter">Starter</th><th data-en="Premium" data-ar="Premium">Premium</th></tr></thead>
 <tbody>
 <tr><td data-en="Design" data-ar="التصميم">Design</td><td><span class="feature" data-en="A customized, professional basic design using your brand colors and visual identity." data-ar="تصميم أساسي احترافي مخصص باستخدام ألوان وهوية البراند.">A customized, professional basic design using your brand colors and visual identity.</span><span class="feature" data-en="Customization of the main store elements and layout." data-ar="تخصيص العناصر الأساسية وتنسيق المتجر.">Customization of the main store elements and layout.</span></td><td><span class="feature" data-en="A fully customized store design — not just a basic theme setup." data-ar="تصميم مخصص بالكامل للمتجر، مش مجرد تعديل على قالب جاهز.">A fully customized store design — not just a basic theme setup.</span><span class="feature" data-en="Animations, videos, pop-ups and a custom loading screen." data-ar="حركات وفيديوهات ونوافذ منبثقة وشاشة تحميل مخصصة.">Animations, videos, pop-ups and a custom loading screen.</span></td></tr>
 <tr><td data-en="Products" data-ar="المنتجات">Products</td><td data-en="Up to 7 products" data-ar="حتى ٧ منتجات">Up to 7 products</td><td data-en="Up to 15 products" data-ar="حتى ١٥ منتجًا">Up to 15 products</td></tr>
